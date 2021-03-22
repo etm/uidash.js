@@ -14,6 +14,8 @@
   <http://www.gnu.org/licenses/>.
 */
 
+@import url("uidash-icons.css");
+
 :root {
   --x-ui-border-color: #a1a1a1;
   --x-ui-outside-color: #ffffff;
