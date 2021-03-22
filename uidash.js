@@ -167,10 +167,10 @@ function uidash_toggle_vis_tab(moi) {// {{{
 $(document).ready(function() {
   if (!($.browser.name == "Firefox" && $.browser.version >= 20) && !($.browser.name == "Chrome" && $.browser.version >= 30)) {
     $('body').children().remove();
-    $('body').append('Sorry, only Firefox >= 20.0 and Chrom(e|ium) >= 17 for now.');
+    $('body').append('Sorry, only Firefox >= 20.0 and Chrom(e|ium) >= 17.');
   }
   $('ui-rest ui-content ui-resizehandle').dragcolumn();
-  $('*[is=x-ui] > ui-resizehandle').dragresize();
+  $('*[is=x-ui-] > ui-resizehandle').dragresize();
   $(document).on('click','ui-tabbar ui-tab.switch',function(){uidash_toggle_vis_tab(this);});
   $(document).on('click','ui-tabbar ui-tab:not(.switch)',function(){uidash_activate_tab(this);});
   uidash_add_close($('ui-tabbar ui-tab.closeable'));
