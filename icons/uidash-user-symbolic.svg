@@ -1,0 +1,16 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" inkscape:version="0.48.5 r10040" sodipodi:docname="user-info-symbolic.svg" viewBox="0 0 16 16">
+  <defs id="defs11"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1128" inkscape:window-height="925" id="namedview9" showgrid="false" inkscape:object-nodes="true" inkscape:snap-page="true" inkscape:zoom="32" inkscape:cx="5.7495041" inkscape:cy="8.4855176" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="0" inkscape:current-layer="svg7384"/>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <path style="fill:#bebebe" d="m 4.8461536,7.5 c -1.3654154,0.4471138 -2.9981539,1.5898462 -3,3.576923 l 0,3.692308 C 1.8452674,15.451077 2.3950767,16 3.0769228,16 c 3.6236878,0 6.3844805,0 9.8461532,0 0.681846,0 1.231656,-0.548923 1.23077,-1.230769 l 0,-3.692308 C 14.151999,9.089846 12.519261,7.9471138 11.153846,7.5 10.285649,8.2674215 9.2498459,8.6153846 7.9999998,8.6153846 6.7501536,8.6153846 5.7143382,8.2674215 4.8461536,7.5 z" id="path9219" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccsc"/>
+  <path inkscape:connector-curvature="0" d="m 11.692308,3.6923077 a 3.6923077,3.6923077 0 0 1 -7.3846157,0 3.6923077,3.6923077 0 1 1 7.3846157,0 z" style="color:#bebebe;fill:#bebebe" id="path9221"/>
+</svg>

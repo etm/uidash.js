@@ -1,0 +1,18 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" viewBox="0 0 16 16" inkscape:version="0.48.5 r10040" sodipodi:docname="usse-quicklinks-symbolic.svg">
+  <defs id="defs11"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="2396" inkscape:window-height="1017" id="namedview9" showgrid="false" inkscape:zoom="5.2149125" inkscape:cx="-62.103813" inkscape:cy="-7.5140497" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="0" inkscape:current-layer="svg7384"/>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <g id="g3912" transform="translate(1.1084279,-0.04317068)">
+    <path sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0" id="rect7356" d="m 1.0545551,14.933799 1.6875,0 c 0,-4.593755 0,-9.1875068 0,-13.7812566 l -1.6875,0 c 0,4.5937498 0,9.1875016 0,13.7812566 z" style="color:#bebebe;fill:#bebebe"/>
+    <path sodipodi:nodetypes="caaaaaaaccaaaaaaaacc" inkscape:connector-curvature="0" id="path3007" d="m 12.728589,1.7772753 c 0,0 -0.290116,-0.00852 -0.420941,0.04431 -0.356143,0.1438212 -0.586721,0.498999 -0.908346,0.7089535 C 11.216692,2.6497449 11.035028,2.78857 10.823278,2.8407069 10.177869,2.9996186 9.4670513,3.0060059 8.8293463,2.8185519 8.1098633,2.6070573 7.5706413,2.0020465 6.9240353,1.6221932 6.6989103,1.4899417 6.4895973,1.3125374 6.2372363,1.24556 5.8231813,1.1356695 5.3671523,1.1167283 4.9522583,1.223405 4.3339273,1.382392 3.2906493,2.1760607 3.2906493,2.1760607 l 0,6.8901395 c 0,0 0.240869,0.05546 0.354477,0.02215 0.39546,-0.115931 0.6360636,-0.5321637 0.996965,-0.731108 0.1737493,-0.095778 0.3583916,-0.1839999 0.55387,-0.2179186 0.2329521,-0.040421 0.4769742,-0.023527 0.708953,0.02215 0.2243185,0.044169 0.435974,0.1419849 0.642489,0.2400726 0.8191697,0.3890783 1.473102,1.136408 2.348408,1.373597 0.727043,0.197013 1.5479007,0.2462158 2.2597887,0 0.49705,-0.171913 0.876739,-0.5951167 1.240668,-0.974812 0.131265,-0.1369519 0.332321,-0.4619959 0.332321,-0.4619959 z" style="color:#bebebe;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"/>
+  </g>
+</svg>

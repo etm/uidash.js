@@ -1,0 +1,20 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" viewBox="0 0 16 16" inkscape:version="0.91 r13725" sodipodi:docname="usse-bookmark-outer-symbolic.svg">
+  <defs id="defs9"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1616" inkscape:window-height="938" id="namedview7" showgrid="true" inkscape:zoom="14.75" inkscape:cx="-3.661017" inkscape:cy="8" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="0" inkscape:current-layer="svg7384">
+    <inkscape:grid type="xygrid" id="grid5252"/>
+  </sodipodi:namedview>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <g id="layer12" transform="translate(-261 -647)">
+    <path style="color:#000000;fill:#bebebe" d="M 8 0.68945312 C 6.9995 0.68545312 6.4369 4.2296531 5.625 4.8144531 C 4.81345 5.3989731 1.28145 4.8019531 0.96875 5.7519531 C 0.65589 6.7023131 3.85095 8.3304031 4.15625 9.2832031 C 4.46138 10.235653 2.81815 13.410953 3.625 14.001953 C 4.43217 14.593173 6.96815 12.060353 7.96875 12.064453 C 8.96885 12.068453 11.46985 14.649153 12.28125 14.064453 C 13.09297 13.479493 11.46814 10.264753 11.78125 9.3144531 C 12.09423 8.3645531 15.3053 6.7668531 15 5.8144531 C 14.6945 4.8617031 11.15075 5.4371331 10.34375 4.8457031 C 9.53705 4.2545031 9.0002 0.69325313 8 0.68945312 z M 7.9941406 3.2402344 C 8.6154384 3.2425948 8.948118 5.4550278 9.4492188 5.8222656 C 9.9505058 6.1896463 12.152028 5.832005 12.341797 6.4238281 C 12.531441 7.0154338 10.538165 8.0076035 10.34375 8.5976562 C 10.149254 9.1879575 11.158516 11.185466 10.654297 11.548828 C 10.150277 11.912028 8.595845 10.307172 7.9746094 10.304688 C 7.3530631 10.302141 5.7767833 11.877016 5.2753906 11.509766 C 4.7741967 11.142652 5.7950074 9.1697617 5.6054688 8.578125 C 5.4158245 7.9862708 3.4326128 6.9751041 3.6269531 6.3847656 C 3.8211941 5.7946508 6.0154179 6.1658227 6.5195312 5.8027344 C 7.0238621 5.4394721 7.3726565 3.2377497 7.9941406 3.2402344 z " transform="translate(261,647)" id="path11922-4"/>
+  </g>
+  <g transform="matrix(0.62117355,0,0,0.62117355,-159.10177,-399.08817)" id="g5254" style="fill:#75507b"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" viewBox="0 0 16 16" inkscape:version="0.48.5 r10040" sodipodi:docname="usse-link-symbolic.svg">
+  <defs id="defs18"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="2398" inkscape:window-height="1018" id="namedview16" showgrid="false" showguides="true" inkscape:guide-bbox="true" inkscape:zoom="181.01934" inkscape:cx="10.485516" inkscape:cy="14.120958" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="svg7384"/>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <path style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#bebebe;enable-background:new" d="m 8.96875,0.96875 c 0,0 0,0.6768659 0,1 2.22e-4,0.5555887 0.5403648,1.0494335 1.09375,1 l 1.53125,0 L 8.78125,5.75 C 8.3998595,6.125202 8.3970384,6.8150938 8.7753473,7.1934027 9.1536562,7.5717116 9.843548,7.5688905 10.21875,7.1875 l 2.84375,-2.8125 0,1.59375 c 5.2e-5,0.5235845 0.476416,0.9999476 1,1 0.323978,8.536e-4 1,0 1,0 l 0,-6 z" id="path12111" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccsccccccc"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" viewBox="0 0 16 16" inkscape:version="0.91 r13725" sodipodi:docname="usse-details-symbolic.svg">
+  <defs id="defs13"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="2368" inkscape:window-height="1016" id="namedview11" showgrid="true" showguides="true" inkscape:guide-bbox="true" inkscape:zoom="32" inkscape:cx="5.8712428" inkscape:cy="3.9462881" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="svg7384" inkscape:snap-global="true" inkscape:object-paths="true" inkscape:snap-nodes="true" inkscape:object-nodes="true" inkscape:snap-grids="true" inkscape:snap-to-guides="true" inkscape:snap-bbox="true" inkscape:bbox-paths="true" inkscape:snap-others="true" inkscape:bbox-nodes="true">
+    <sodipodi:guide orientation="1,0" position="8,15.307617" id="guide2990"/>
+    <sodipodi:guide orientation="1,0" position="7.0047765,13.722291" id="guide2992"/>
+    <sodipodi:guide orientation="1,0" position="8.9935144,12.772116" id="guide2994"/>
+    <sodipodi:guide orientation="0,1" position="4.5630484,2.0108349" id="guide2996"/>
+    <sodipodi:guide orientation="0,1" position="5.4137863,4.0106213" id="guide2998"/>
+    <sodipodi:guide orientation="0,1" position="6.7727571,15.003922" id="guide3000"/>
+    <sodipodi:guide orientation="0,1" position="7.8113202,13.015184" id="guide3002"/>
+    <sodipodi:guide orientation="1,0" position="6.0104076,13.744388" id="guide3004"/>
+    <sodipodi:guide orientation="1,0" position="9.671875,9.234375" id="guide3006"/>
+    <inkscape:grid type="xygrid" id="grid3847"/>
+    <sodipodi:guide orientation="1,0" position="5.5314494,11.121959" id="guide3967"/>
+  </sodipodi:namedview>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 8,0.99607801 6,0 0,1.99999999 -6,0 z" id="rect4145"/>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 8,3.9960778 6,0 0,2 -6,0 z" id="rect4145-8"/>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 1.9952235,6.996078 12.0047765,0 0,2 -12.0047765,0 z" id="rect4145-7"/>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 2,10 12,0 0,2 -12,0 z" id="rect4145-4"/>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 2,13 12,0 0,2 -12,0 z" id="rect4145-71"/>
+  <path style="color:#bebebe;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" d="m 3.6653595,0.99217163 0,1.67339787 -1.6701359,0 0,1.6701359 1.6701359,0 0,1.6701358 1.6701358,0 0,-1.6701358 1.6701359,0 0,-1.6701359 -1.6701359,0 0,-1.67339787 -1.6701358,0 z" id="rect4145-8-8" inkscape:connector-curvature="0"/>
+</svg>

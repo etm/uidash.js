@@ -1,0 +1,24 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" height="16" width="16" version="1.1" viewBox="0 0 16 16" inkscape:version="0.48.5 r10040" sodipodi:docname="usse-quicklinks-symbolic.svg">
+  <defs id="defs11"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="2560" inkscape:window-height="1080" id="namedview9" showgrid="false" inkscape:zoom="41.7193" inkscape:cx="7.3428266" inkscape:cy="7.4141369" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="svg7384"/>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <g id="g3045" transform="translate(-0.046875,-0.15807517)">
+    <path sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0" id="rect7356" d="m 1.15625,1.1875 0,1.6875 c 4.59375,0 9.1875,0 13.78125,0 l 0,-1.6875 c -4.59375,0 -9.1875,0 -13.78125,0 z" style="color:#bebebe;fill:#bebebe"/>
+    <path sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0" id="rect7358" d="m 1.15625,4.3482552 0,1.6875 c 4.59375,0 9.1875,0 13.78125,0 l 0,-1.6875 c -4.59375,0 -9.1875,0 -13.78125,0 z" style="color:#bebebe;fill:#bebebe"/>
+    <path sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0" id="rect7360" d="m 1.15625,7.5090113 0,1.6875 c 4.59375,0 9.1875,0 13.78125,0 l 0,-1.6875 c -4.59375,0 -9.1875,0 -13.78125,0 z" style="color:#bebebe;fill:#bebebe"/>
+    <g transform="matrix(0.60002774,0,0,0.60002774,-126.08167,-440.90433)" id="layer12-6">
+      <path d="m 229,752.59 -0.71875,0.6875 -5,5 a 1.0165,1.0165 0 1 0 1.4375,1.4375 l 4.28,-4.28 4.2812,4.2812 a 1.0165,1.0165 0 1 0 1.4375,-1.4375 l -5,-5 -0.72,-0.69 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#bebebe" id="path8432" inkscape:connector-curvature="0"/>
+      <rect height="1" x="759" y="-235" width="1" transform="matrix(0,1,-1,0,0,0)" ry="1" rx="0" style="fill:#bebebe" id="rect8438"/>
+      <rect height="1" x="759" y="-224" width="1" transform="matrix(0,1,-1,0,0,0)" ry="1" rx="0" style="fill:#bebebe" id="rect8442"/>
+    </g>
+  </g>
+</svg>
