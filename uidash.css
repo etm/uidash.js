@@ -44,13 +44,13 @@ body {
 }
 
 /* Browser Bug, set textarea explicitly */
-*[is=x-ui-] textarea, input, select, button {
+*[is=x-ui-] textarea, *[is=x-ui-] input, *[is=x-ui-] select, *[is=x-ui-] button {
   font-family: Verdana, Helvetica, sans-serif;
   font-size: 1em;
   resize: none;
 }
 
-*[is=x-ui-] button {
+*[is=x-ui-] button, *[is=x-ui-] select {
   padding: .1em .2em;
   border: 1pt solid var(--x-ui-border-color);
   border-radius: 0.2em;
@@ -185,7 +185,11 @@ body {
   text-align:right;
   white-space: nowrap;
 }
-[is=x-ui-] ui-tabbar > ui-last {
+*[is=x-ui-] ui-tabbar > ui-last {
+  border-bottom: 1pt solid var(--x-ui-border-color);
+}
+*[is=x-ui-] ui-tabbar > ui-space {
+  width: 1em;
   border-bottom: 1pt solid var(--x-ui-border-color);
 }
 *[is=x-ui-] ui-rest > ui-tabbar > ui-behind {
@@ -195,6 +199,9 @@ body {
 *[is=x-ui-] ui-rest > ui-tabbar > ui-before {
   border-bottom: 1pt solid var(--x-ui-border-color);
   padding-left:0.5em;
+}
+*[is=x-ui-] ui-rest > ui-tabbar > ui-last {
+  padding-right: 0.5em;
 }
 
 *[is=x-ui-] ui-content {
