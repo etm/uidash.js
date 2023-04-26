@@ -14,6 +14,7 @@
   <http://www.gnu.org/licenses/>.
 */
 
+@charset "UTF-8";
 @import url("uidash-icons.css");
 
 :root {
@@ -140,13 +141,13 @@ body {
   background-color: var(--x-ui-light-back-color);
 }
 *[is=x-ui-] ui-tabbed > ui-tabbar > ui-tab.switch:after {
-  content: "▽";
+  content: "\25BD"; /* ▽ */
   font-weight: bold;
   vertical-align:top;
   color: var(--x-ui-light-text-color);
 }
 *[is=x-ui-] ui-tabbed.off > ui-tabbar > ui-tab.switch:after {
-  content: "▶";
+  content: "\25B6"; /* ▶ */
   font-weight: bold;
   color: var(--x-ui-light-text-color);
   vertical-align:top;
