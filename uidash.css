@@ -141,13 +141,13 @@ body {
   background-color: var(--x-ui-light-back-color);
 }
 *[is=x-ui-] ui-tabbed > ui-tabbar > ui-tab.switch:after {
-  content: "\25BD"; /* ▽ */
+  content: "▽";
   font-weight: bold;
   vertical-align:top;
   color: var(--x-ui-light-text-color);
 }
 *[is=x-ui-] ui-tabbed.off > ui-tabbar > ui-tab.switch:after {
-  content: "\25B6"; /* ▶ */
+  content: "▶";
   font-weight: bold;
   color: var(--x-ui-light-text-color);
   vertical-align:top;
