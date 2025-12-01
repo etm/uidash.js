@@ -17,6 +17,11 @@
 
 @import url("uidash-icons.css");
 
+@font-face {
+  font-family: adawaita-sans;
+  src: url(AdwaitaSans-Regular.ttf);
+}
+
 :root {
   --x-ui-border-color: #a1a1a1;
   --x-ui-outside-color: #ffffff;
@@ -24,15 +29,18 @@
   --x-ui-light-text-color: #333;
   --x-ui-light-back-color: #e8e8e8;
   --x-ui-link-color: #425d73;
+  --x-ui-content-border-color: #ffed00;
+  --x-ui-content-light-background: #f0f0f0;
+  --x-ui-content-hover-background: #99cce660;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: adawaita-sans;
   font-size: 1em;
 }
 
 *[is=x-ui-] {
-  font-family: sans-serif,Arial,Verdana,Helvetica;
+  font-family: adawaita-sans;
   font-size: 0.85em;
   height: 100vh;
   display: flex;
@@ -46,7 +54,7 @@ body {
 
 /* Browser Bug, set textarea explicitly */
 *[is=x-ui-] textarea, *[is=x-ui-] input, *[is=x-ui-] select, *[is=x-ui-] button {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: adawaita-sans;
   font-size: 1em;
   resize: none;
 }
@@ -62,17 +70,12 @@ body {
   background: -moz-linear-gradient(top, white, var(--x-ui-light-back-color));
   cursor: pointer;
 }
-*[is=x-ui-] button::-moz-focus-inner {
-  border: 0 none;
-  padding: 0;
-  margin: 0;
-}
 *[is=x-ui-] button.highlight {
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(Highlight));
   background: -moz-linear-gradient(top, white, Highlight);
 }
 
-*[is=x-ui-] input { font-family: sans-serif; font-size: 1em; }
+*[is=x-ui-] input { font-family: adawaita-sans; font-size: 1em; }
 *[is=x-ui-] input::-webkit-input-placeholder { color: red; }
 *[is=x-ui-] input:-moz-placeholder { color: red; }
 
@@ -283,7 +286,7 @@ body {
 }
 
 *[is=x-ui-] ui-tabbed, ui-content, ui-area { display: block; }
-*[is=x-ui-] ui-content > ui-area.inactive, ui-content > ui-resizehandle.inactive, ui-rest > ui-content > ui-resizehandle.inactive { display: none }
+*[is=x-ui-] ui-content > ui-area.inactive, ui-content > ui-resizehandle.inactive, ui-rest > ui-content > ui-resizehandle.inactive { display: none!important; }
 
 *[is=x-ui-] ui-content > ui-area .x-ui-layout {
   width: 100%;

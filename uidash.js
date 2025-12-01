@@ -10,8 +10,7 @@
   PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License along with
-  UIDASH.JS (file COPYING in the main directory).  If not, see
-  <http://www.gnu.org/licenses/>.
+  UIDASH.JS. If not, see <http://www.gnu.org/licenses/>.
 */
 
 function uidash_click_tab(moi) { // {{{
@@ -70,39 +69,41 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
 (function($) { //{{{
   $.fn.dragcolumn = function() {
     this.each(function(){
-    var drag = $(this);
-    var prev = drag.prev();
-    var next = drag.next();
+      var drag = $(this);
+      var prev = drag.prev();
+      var next = drag.next();
 
-    $(this).on("mousedown", function(e) {
-      drag.addClass('draggable');
-      $(document).one("mouseup", function(e) {
-        drag.removeClass('draggable');
+      drag.on("mousedown", function(e) {
+        drag.addClass('draggable');
+        $('body').addClass('drag-in-progress');
+        $(document).one("mouseup", function(e) {
+          drag.removeClass('draggable');
+          $('body').removeClass('drag-in-progress');
+          e.preventDefault();
+        });
         e.preventDefault();
       });
-      e.preventDefault();
-    });
 
-    $(document).on("mousemove", function(e) {
-      if (!drag.hasClass('draggable'))
-        return;
+      $(document).on("mousemove", function(e) {
+        if (!drag.hasClass('draggable'))
+          return;
 
-      // Assume 50/50 split between prev and next then adjust to
-      // the next X for prev
-      var total = prev.outerWidth() + next.outerWidth();
-      var pos = e.pageX - prev.offset().left;
-      if (pos > total) {
-        pos = total;
-      }
+        // Assume 50/50 split between prev and next then adjust to
+        // the next X for prev
+        var total = prev.outerWidth() + next.outerWidth();
+        var pos = e.pageX - prev.offset().left;
+        if (pos > total) {
+          pos = total;
+        }
 
-      var leftPercentage = pos / total;
-      var rightPercentage = 1 - leftPercentage;
+        var leftPercentage = pos / total;
+        var rightPercentage = 1 - leftPercentage;
 
-      prev.css('flex', leftPercentage.toString());
-      next.css('flex', rightPercentage.toString());
+        prev.css('flex', leftPercentage.toString());
+        next.css('flex', rightPercentage.toString());
 
-      e.preventDefault();
-    });
+        e.preventDefault();
+      });
     });
   }
   $.fn.dragresize = function() {
@@ -155,10 +156,10 @@ function uidash_activate_tab(moi) { // {{{
   });
 } // }}}
 function uidash_toggle_vis_tab(moi) {// {{{
-  if ($(moi)[0].nodeName == 'UI-TABBED') {
+  if ($(moi).length > 0 && $(moi)[0].nodeName == 'UI-TABBED') {
     var tabbed = $(moi);
   }
-  if ($(moi)[0].nodeName == 'UI-TAB') {
+  if ($(moi).length > 0 && $(moi)[0].nodeName == 'UI-TAB') {
     var tabbed = $(moi).parent().parent();
   }
   if (tabbed) {
@@ -167,12 +168,13 @@ function uidash_toggle_vis_tab(moi) {// {{{
 }// }}}
 
 $(document).ready(function() {
-  if (!($.browser.name == "Firefox" && $.browser.version >= 20) && !($.browser.name == "Chrome" && $.browser.version >= 30)) {
+  if (!($.browser.name == "Firefox" && $.browser.version >= 20) && !($.browser.name == "Chrome" && $.browser.version >= 30) && !($.browser.name == "Safari" && $.browser.version >= 500)) {
     $('body').children().remove();
     $('body').append('Sorry, only Firefox >= 20.0 and Chrom(e|ium) >= 17.');
   }
-  $('ui-rest ui-content ui-resizehandle').dragcolumn();
+  $('*[is=x-ui-] ui-rest > ui-content > ui-resizehandle').dragcolumn();
   $('*[is=x-ui-] > ui-resizehandle').dragresize();
+  $('*[is=x-ui-] ui-rest > ui-content > ui-area > ui-resizehandle').dragresize();
   $(document).on('click','ui-tabbar ui-tab.switch',function(){uidash_toggle_vis_tab(this);});
   $(document).on('click','ui-tabbar ui-tab:not(.switch)',function(){uidash_activate_tab(this);});
   uidash_add_close($('ui-tabbar ui-tab.closeable'));
