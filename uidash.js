@@ -69,11 +69,12 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
 
 (function($) { //{{{
   $.fn.dragcolumn = function() {
+    this.each(function(){
     var drag = $(this);
     var prev = drag.prev();
     var next = drag.next();
 
-    this.on("mousedown", function(e) {
+    $(this).on("mousedown", function(e) {
       drag.addClass('draggable');
       $(document).one("mouseup", function(e) {
         drag.removeClass('draggable');
@@ -101,6 +102,7 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
       next.css('flex', rightPercentage.toString());
 
       e.preventDefault();
+    });
     });
   }
   $.fn.dragresize = function() {
