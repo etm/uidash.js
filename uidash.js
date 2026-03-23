@@ -12,6 +12,7 @@
   You should have received a copy of the GNU General Public License along with
   UIDASH.JS. If not, see <http://www.gnu.org/licenses/>.
 */
+var uidash_event_activate_tab = new Event("uidash:activate_tab", {"bubbles":true, "cancelable":false});
 
 function uidash_click_tab(moi) { // {{{
   $(moi).trigger('click');
@@ -154,6 +155,7 @@ function uidash_activate_tab(moi) { // {{{
       $("ui-content *[data-belongs-to-tab=" + b + "]",tabbed).addClass("inactive");
     }
   });
+  document.dispatchEvent(uidash_event_activate_tab);
 } // }}}
 function uidash_toggle_vis_tab(moi) {// {{{
   if ($(moi).length > 0 && $(moi)[0].nodeName == 'UI-TABBED') {
