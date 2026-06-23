@@ -116,7 +116,12 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
     this.on("mousedown", function(e) {
       drag.addClass('draggable');
       initpos = e.pageY;
-      initheight = $("ui-content",prev).height();
+      if ($("ui-content",prev).length > 0) {
+        initheight = $("ui-content",prev).height();
+      }
+      if (prev.prop("tagName") == 'UI-PART') {
+        initheight = prev.height();
+      }
       $(document).one("mouseup", function(e) {
         drag.removeClass('draggable');
         e.preventDefault();
@@ -132,7 +137,12 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
       if (pos < 0)
         return;
 
-      $("ui-content",prev).css('height', pos.toString());
+      if ($("ui-content",prev).length > 0) {
+        $("ui-content",prev).css('height', pos.toString());
+      }
+      if (prev.prop("tagName") == 'UI-PART') {
+        prev.css('height', pos.toString());
+      }
 
       e.preventDefault();
     });

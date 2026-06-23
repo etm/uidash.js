@@ -275,11 +275,11 @@ body {
   padding: 0;
 }
 
-*[is=x-ui-] > ui-resizehandle {
+*[is=x-ui-] > ui-resizehandle, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-resizehandle {
   color: var(--x-ui-border-color);
   white-space:nowrap;
   z-index: 99999;
-  cursor: s-resize;
+  cursor: ns-resize;
   text-align: right;
   margin-top: 0.2em;
   margin-right: 0.5em;
