@@ -110,17 +110,20 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
   $.fn.dragresize = function() {
     var drag = $(this);
     var prev = drag.prev();
+    var next = drag.next();
     var initpos = 0;
-    var initheight = 0;
+    var pheight = 0;
+    var nheight = 0;
 
     this.on("mousedown", function(e) {
       drag.addClass('draggable');
       initpos = e.pageY;
       if ($("ui-content",prev).length > 0) {
-        initheight = $("ui-content",prev).height();
+        pheight = $("ui-content",prev).height();
       }
-      if (prev.prop("tagName") == 'UI-PART') {
-        initheight = prev.height();
+      if (prev.prop("tagName") == 'UI-PART' && next.prop("tagName") == 'UI-PART') {
+        pheight = prev.height();
+        nheight = next.height();
       }
       $(document).one("mouseup", function(e) {
         drag.removeClass('draggable');
@@ -133,19 +136,43 @@ function uidash_clone_tab(tabbar,original,title,id,closeable,additionalclasses) 
       if (!drag.hasClass('draggable'))
         return;
 
-      var pos = initheight - (initpos - e.pageY);
-      if (pos < 0)
-        return;
+      var ppos = pheight - (initpos - e.pageY);
+      if (ppos < 0) ppos = 0;
+      var npos = nheight + (initpos - e.pageY);
+      if (npos < 0) npos = 0;
 
       if ($("ui-content",prev).length > 0) {
-        $("ui-content",prev).css('height', pos.toString());
+        $("ui-content",prev).css('height', ppos.toString());
       }
-      if (prev.prop("tagName") == 'UI-PART') {
-        prev.css('height', pos.toString());
+      if (prev.prop("tagName") == 'UI-PART' && next.prop("tagName") == 'UI-PART') {
+        prev.css('height', ppos.toString());
+        if (prev.height() > ppos) {
+          prev.css('height', prev.height().toString());
+          next.css('height', next.height().toString());
+        } else {
+          next.css('height', npos.toString());
+          if (next.height() > npos) {
+            prev.css('height', prev.height().toString());
+            next.css('height', next.height().toString());
+          }
+        }
       }
 
       e.preventDefault();
     });
+
+    if (prev.prop("tagName") == 'UI-PART' && next.prop("tagName") == 'UI-PART') {
+      // do complex shit to check if layouting is already done
+      const observer = new ResizeObserver((entries, obs) => {
+        const rect = prev.get(0).getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          obs.disconnect();
+          prev.css('height', prev.get(0).getBoundingClientRect().height.toString());
+          next.css('height', next.get(0).getBoundingClientRect().height.toString());
+        }
+      });
+      observer.observe(prev.get(0));
+    }
   }
 })(jQuery); //}}}
 
