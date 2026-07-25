@@ -10,5 +10,5 @@ task :icons do
 end
 
 task :default => [:icons] do
-  puts `
+  puts `fantasticon`
 end

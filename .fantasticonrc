@@ -1,0 +1,8 @@
+module.exports = {
+  inputDir: './uidash-icons',
+  outputDir: './',
+  fontTypes: ['ttf'],
+  assetTypes: ['css', 'html'],
+  name: 'uidash-icons',
+  prefix: 'uidash-icon'
+};

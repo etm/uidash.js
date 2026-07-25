@@ -6,7 +6,19 @@ Sorry: requires jquery. Feel free to remove this dependency and send a pull requ
 
 ### Development
 
+Instructions
+
 ```bash
-sudo dnf install woff2-tools fontforge eot-utils woff
-gem --user install fontcustom
+sudo dnf install nodejs nodejs-npm
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+echo "export PATH=\"$\{PATH}\":~/.npm-global/bin" >> ~/.bashrc
+# close terminal and then open again
+npm install -g fantasticon
+```
+
+Now you can go to the checked out git repo and recreate the font (possibly after adding svgs to the dir).
+
+```bash
+rake
 ```

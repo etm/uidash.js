@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "uidash-icons";
+    src: url("./uidash-icons.ttf?5e4ee83e026c83c18c806e1b58c23174") format("truetype");
+}
+
+i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
+    font-family: uidash-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.uidash-icon-user-symbolic:before {
+    content: "\f101";
+}
+.uidash-icon-units-symbolic:before {
+    content: "\f102";
+}
+.uidash-icon-target-symbolic:before {
+    content: "\f103";
+}
+.uidash-icon-structure-symbolic:before {
+    content: "\f104";
+}
+.uidash-icon-slink-symbolic:before {
+    content: "\f105";
+}
+.uidash-icon-search-symbolic:before {
+    content: "\f106";
+}
+.uidash-icon-rewind-symbolic:before {
+    content: "\f107";
+}
+.uidash-icon-register-symbolic:before {
+    content: "\f108";
+}
+.uidash-icon-reduce-symbolic:before {
+    content: "\f109";
+}
+.uidash-icon-quicklinks-symbolic:before {
+    content: "\f10a";
+}
+.uidash-icon-phone-symbolic:before {
+    content: "\f10b";
+}
+.uidash-icon-neutral-symbolic:before {
+    content: "\f10c";
+}
+.uidash-icon-more-symbolic:before {
+    content: "\f10d";
+}
+.uidash-icon-menu-symbolic:before {
+    content: "\f10e";
+}
+.uidash-icon-logout-symbolic:before {
+    content: "\f10f";
+}
+.uidash-icon-login-symbolic:before {
+    content: "\f110";
+}
+.uidash-icon-link-symbolic:before {
+    content: "\f111";
+}
+.uidash-icon-language-symbolic:before {
+    content: "\f112";
+}
+.uidash-icon-info-symbolic:before {
+    content: "\f113";
+}
+.uidash-icon-homepage-symbolic:before {
+    content: "\f114";
+}
+.uidash-icon-forward-symbolic:before {
+    content: "\f115";
+}
+.uidash-icon-filter-symbolic:before {
+    content: "\f116";
+}
+.uidash-icon-expand-symbolic:before {
+    content: "\f117";
+}
+.uidash-icon-edit-symbolic:before {
+    content: "\f118";
+}
+.uidash-icon-details-symbolic:before {
+    content: "\f119";
+}
+.uidash-icon-comment-symbolic:before {
+    content: "\f11a";
+}
+.uidash-icon-check-symbolic:before {
+    content: "\f11b";
+}
+.uidash-icon-bookmark-symbolic:before {
+    content: "\f11c";
+}
+.uidash-icon-bookmark-outer-symbolic:before {
+    content: "\f11d";
+}
