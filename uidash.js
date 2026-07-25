@@ -192,6 +192,9 @@ function uidash_activate_tab(moi) { // {{{
       $("ui-content *[data-belongs-to-tab=" + b + "]",tabbed).addClass("inactive");
     }
   });
+  if (tabbed.hasClass('off')) {
+    tabbed.toggleClass('off');
+  }
   document.dispatchEvent(uidash_event_activate_tab);
 } // }}}
 function uidash_toggle_vis_tab(moi) {// {{{
@@ -209,7 +212,7 @@ function uidash_toggle_vis_tab(moi) {// {{{
 $(document).ready(function() {
   if (!($.browser.name == "Firefox" && $.browser.version >= 20) && !($.browser.name == "Chrome" && $.browser.version >= 30) && !($.browser.name == "Safari" && $.browser.version >= 500)) {
     $('body').children().remove();
-    $('body').append('Sorry, only Firefox >= 20.0 and Chrom(e|ium) >= 17.');
+    $('body').append('Use Firefox >= 20.0 or Chrom(e|ium) >= 30. Use Firefox if possible. Dont support the errosion of our freedom.');
   }
   $('*[is=x-ui-] ui-rest > ui-content > ui-resizehandle').dragcolumn();
   $('*[is=x-ui-] > ui-resizehandle').dragresize();

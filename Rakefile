@@ -10,5 +10,5 @@ task :icons do
 end
 
 task :default => [:icons] do
-  puts `cd icons; fontcustom compile . --name uidash-icons --no-hash`
+  puts `
 end
