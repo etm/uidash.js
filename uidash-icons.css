@@ -1,6 +1,6 @@
 @font-face {
     font-family: "uidash-icons";
-    src: url("./uidash-icons.ttf?63ae019d6aad521e8f60b4bedb6be255") format("truetype");
+    src: url("./uidash-icons.ttf?f43c11068058bd2eafd956cb3c0978ce") format("truetype");
 }
 
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
@@ -74,7 +74,7 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 .uidash-icon-info:before {
     content: "\f114";
 }
-.uidash-icon-homepage:before {
+.uidash-icon-home:before {
     content: "\f115";
 }
 .uidash-icon-filter:before {
@@ -112,4 +112,10 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 }
 .uidash-icon-add:before {
     content: "\f121";
+}
+.uidash-icon-folder:before {
+    content: "\f122";
+}
+.uidash-icon-folder-open:before {
+    content: "\f123";
 }
