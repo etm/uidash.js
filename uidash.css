@@ -180,8 +180,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   content: "\f10c";
-  font-weight: bold;
-  vertical-align:top;
+
+  alignment-baseline: baseline;
+  baseline-shift: -3px;
+  baseline-source: auto;
+
   color: var(--x-ui-light-text-color);
 }
 *[is=x-ui-] ui-tabbed.off > ui-tabbar > ui-tab.switch:after {
@@ -195,9 +198,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   content: "\f11b";
-  font-weight: bold;
+
+  alignment-baseline: baseline;
+  baseline-shift: -3px;
+  baseline-source: auto;
+
   color: var(--x-ui-light-text-color);
-  vertical-align:top;
 }
 
 *[is=x-ui-] ui-tabbar > ui-tab {
