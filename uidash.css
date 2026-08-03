@@ -17,6 +17,10 @@
 
 @import url("uidash-icons.css");
 
+i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
+  vertical-align: -3.5px;
+}
+
 @font-face {
   font-family: adwaita-sans;
   src: url(AdwaitaSans-Regular.ttf);
