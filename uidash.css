@@ -170,13 +170,31 @@ body {
   background-color: var(--x-ui-light-back-color);
 }
 *[is=x-ui-] ui-tabbed > ui-tabbar > ui-tab.switch:after {
-  content: "▽";
+  font-family: uidash-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\f10c";
   font-weight: bold;
   vertical-align:top;
   color: var(--x-ui-light-text-color);
 }
 *[is=x-ui-] ui-tabbed.off > ui-tabbar > ui-tab.switch:after {
-  content: "▶";
+  font-family: uidash-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\f11b";
   font-weight: bold;
   color: var(--x-ui-light-text-color);
   vertical-align:top;
