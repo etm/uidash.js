@@ -4,17 +4,17 @@
    width="16"
    viewBox="0 0 16 16"
    version="1.1"
-   id="svg2"
-   sodipodi:docname="user.svg"
+   id="svg1"
+   sodipodi:docname="add.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2" />
+     id="defs1" />
   <sodipodi:namedview
-     id="namedview2"
+     id="namedview1"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -22,18 +22,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     showgrid="true"
-     inkscape:zoom="24.925514"
-     inkscape:cx="13.239446"
-     inkscape:cy="17.893312"
+     inkscape:zoom="32"
+     inkscape:cx="19.625"
+     inkscape:cy="16.65625"
      inkscape:window-width="3440"
      inkscape:window-height="1371"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="svg1"
+     showguides="true"
+     showgrid="true">
     <inkscape:grid
-       id="grid2"
+       id="grid5"
        units="px"
        originx="0"
        originy="0"
@@ -48,7 +49,7 @@
        visible="true" />
   </sodipodi:namedview>
   <path
-     id="path1"
-     style="fill:#000000;stroke-width:0.87496"
-     d="m 7.7795511,1.0074763 a 3.2306215,3.2306215 0 0 0 -3.0093837,3.222997 3.2306215,3.2306215 0 0 0 6.4596656,0 3.2306215,3.2306215 0 0 0 -3.4502819,-3.222997 z M 5.2401165,7.5628404 C 4.0454327,7.9540471 2.6168519,8.953235 2.6152366,10.691847 v 3.231542 C 2.6144612,14.519976 3.0952595,15 3.6918476,15 h 8.6163054 c 0.596587,0 1.077386,-0.480024 1.07661,-1.076611 V 10.691847 C 13.383147,8.9532348 11.954567,7.9540471 10.759883,7.5628404 10.000246,8.2343034 9.0935653,8.5386258 8,8.5386258 c -1.0935654,0 -2.0002567,-0.3043224 -2.7598835,-0.9757854 z" />
+     id="rect6"
+     style="fill:#000000;fill-rule:evenodd;stroke:#3d3846;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.427451"
+     d="M 5.5 1 L 5.5 5.5 L 1 5.5 L 1 10.5 L 5.5 10.5 L 5.5 15 L 10.5 15 L 10.5 10.5 L 15 10.5 L 15 5.5 L 10.5 5.5 L 10.5 1 L 5.5 1 z " />
 </svg>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "uidash-icons";
-    src: url("./uidash-icons.ttf?5e4ee83e026c83c18c806e1b58c23174") format("truetype");
+    src: url("./uidash-icons.ttf?63ae019d6aad521e8f60b4bedb6be255") format("truetype");
 }
 
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
@@ -14,90 +14,102 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.uidash-icon-user-symbolic:before {
+.uidash-icon-value:before {
     content: "\f101";
 }
-.uidash-icon-units-symbolic:before {
+.uidash-icon-users:before {
     content: "\f102";
 }
-.uidash-icon-target-symbolic:before {
+.uidash-icon-user:before {
     content: "\f103";
 }
-.uidash-icon-structure-symbolic:before {
+.uidash-icon-target:before {
     content: "\f104";
 }
-.uidash-icon-slink-symbolic:before {
+.uidash-icon-structure:before {
     content: "\f105";
 }
-.uidash-icon-search-symbolic:before {
+.uidash-icon-search:before {
     content: "\f106";
 }
-.uidash-icon-rewind-symbolic:before {
+.uidash-icon-rename:before {
     content: "\f107";
 }
-.uidash-icon-register-symbolic:before {
+.uidash-icon-register:before {
     content: "\f108";
 }
-.uidash-icon-reduce-symbolic:before {
+.uidash-icon-radio:before {
     content: "\f109";
 }
-.uidash-icon-quicklinks-symbolic:before {
+.uidash-icon-radio-checked:before {
     content: "\f10a";
 }
-.uidash-icon-phone-symbolic:before {
+.uidash-icon-properties:before {
     content: "\f10b";
 }
-.uidash-icon-neutral-symbolic:before {
+.uidash-icon-open:before {
     content: "\f10c";
 }
-.uidash-icon-more-symbolic:before {
+.uidash-icon-move:before {
     content: "\f10d";
 }
-.uidash-icon-menu-symbolic:before {
+.uidash-icon-more:before {
     content: "\f10e";
 }
-.uidash-icon-logout-symbolic:before {
+.uidash-icon-menu:before {
     content: "\f10f";
 }
-.uidash-icon-login-symbolic:before {
+.uidash-icon-logout:before {
     content: "\f110";
 }
-.uidash-icon-link-symbolic:before {
+.uidash-icon-login:before {
     content: "\f111";
 }
-.uidash-icon-language-symbolic:before {
+.uidash-icon-link:before {
     content: "\f112";
 }
-.uidash-icon-info-symbolic:before {
+.uidash-icon-language:before {
     content: "\f113";
 }
-.uidash-icon-homepage-symbolic:before {
+.uidash-icon-info:before {
     content: "\f114";
 }
-.uidash-icon-forward-symbolic:before {
+.uidash-icon-homepage:before {
     content: "\f115";
 }
-.uidash-icon-filter-symbolic:before {
+.uidash-icon-filter:before {
     content: "\f116";
 }
-.uidash-icon-expand-symbolic:before {
+.uidash-icon-edit:before {
     content: "\f117";
 }
-.uidash-icon-edit-symbolic:before {
+.uidash-icon-details:before {
     content: "\f118";
 }
-.uidash-icon-details-symbolic:before {
+.uidash-icon-delete:before {
     content: "\f119";
 }
-.uidash-icon-comment-symbolic:before {
+.uidash-icon-comment:before {
     content: "\f11a";
 }
-.uidash-icon-check-symbolic:before {
+.uidash-icon-closed:before {
     content: "\f11b";
 }
-.uidash-icon-bookmark-symbolic:before {
+.uidash-icon-checkox:before {
     content: "\f11c";
 }
-.uidash-icon-bookmark-outer-symbolic:before {
+.uidash-icon-checkox-checked:before {
     content: "\f11d";
+}
+.uidash-icon-check:before {
+    content: "\f11e";
+}
+.uidash-icon-bookmark:before {
+    content: "\f11f";
+}
+.uidash-icon-bookmark-checked:before {
+    content: "\f120";
+}
+.uidash-icon-add:before {
+    content: "\f121";
 }
