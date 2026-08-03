@@ -181,9 +181,7 @@ body {
 
   content: "\f10c";
 
-  alignment-baseline: baseline;
-  baseline-shift: -3px;
-  baseline-source: auto;
+  vertical-align: -3px;
 
   color: var(--x-ui-light-text-color);
 }
@@ -199,9 +197,7 @@ body {
 
   content: "\f11b";
 
-  alignment-baseline: baseline;
-  baseline-shift: -3px;
-  baseline-source: auto;
+  vertical-align: -3px;
 
   color: var(--x-ui-light-text-color);
 }
