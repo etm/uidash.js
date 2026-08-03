@@ -1,0 +1,7 @@
+<svg height="16" width="16" viewBox="0 0 16 16">
+  <path style="color:#000000;fill:#000000" d="M 6,1 6,4 5,4 C 4,4 4,5 4,5 l 0,6 c 0,0 0,1 1,1 l 1,0 0,3 -1,0 C 1,15 1,11 1,11 L 1,5 C 1,5 1,1 5,1 l 1,0 z" connector-curvature="0"/>
+  <g transform="matrix(0,1,-1,0,6,30.45088)">
+    <path d="m -18.45088,-4 -10e-6,-1 c -3e-5,-0.26531 -0.0931,-0.53058 -0.28124,-0.71876 l -3,-3 -0.281,-0.28 -0.87499,0 -0.28126,0.28126 -3,3 c -0.18821,0.18818 -0.28121,0.45347 -0.28121,0.71876 l -1e-5,1 1,0 c 0.26531,4e-5 0.53059,-0.0931 0.71877,-0.28121 l 2.2812,-2.2813 2.2812,2.2812 c 0.18817,0.18815 0.45345,0.28125 0.71875,0.28125 l 1,0 z" style="color:#000000;text-indent:0;text-transform:none;block-progression:tb;fill:#000000" connector-curvature="0"/>
+    <path d="m -23.45088,-7 0,7 2,0 0,-7 -2,0 z" style="color:#000000;text-indent:0;text-transform:none;block-progression:tb;fill:#000000" connector-curvature="0"/>
+  </g>
+</svg>

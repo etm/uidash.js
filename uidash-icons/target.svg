@@ -1,0 +1,20 @@
+<svg height="16" width="16" viewBox="0 0 16 16">
+  <path connector-curvature="0" d="m 8,2.4955 c -3.0289,0 -5.5107,2.479 -5.5107,5.5045 0,3.0254 2.4819,5.5045 5.5107,5.5045 3.0288,0 5.5107,-2.479 5.5107,-5.5045 C 13.5107,4.9746 11.0288,2.4955 8,2.4955 z m 0,2.0089 c 1.9474,0 3.4995,1.5504 3.4995,3.4955 C 11.4995,9.945 9.9473,11.4954 8,11.4954 6.0526,11.4954 4.5005,9.945 4.5005,7.9999 4.5005,6.0547 6.0527,4.5044 8,4.5044 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#000000;enable-background:new"/>
+  <path style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="M 9.0039063,8 C 9.0039063,8.5544422 8.5544422,9.0039063 8,9.0039063 7.4455579,9.0039063 6.9960937,8.5544422 6.9960937,8.0000001 6.9960937,7.4455579 7.4455579,6.9960937 8,6.9960937 8.5544422,6.9960937 9.0039063,7.4455579 9.0039063,8 z" connector-curvature="0"/>
+  <g>
+    <g transform="translate(-3.2190661e-8,0.03454062)">
+      <path connector-curvature="0" d="M 8.5637629,11.998311 C 7.956401,11.577444 6.9654336,12.121788 6.9948344,12.860133 l 3e-7,1.900912 c 0.00114,0.529443 0.4871509,1.009097 1.0165631,1.00327 0.5294122,-0.0058 1.0047471,-0.49606 0.9942364,-1.0254 l -3e-7,-1.900912 C 9.0086796,12.507246 8.835413,12.179964 8.5601567,11.996544 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#000000;enable-background:new" nodetypes="cccscccc"/>
+    </g>
+    <g transform="translate(-3.2190661e-8,-11.650318)">
+      <path connector-curvature="0" d="M 8.5637629,11.998311 C 7.956401,11.577444 6.9654336,12.121788 6.9948344,12.860133 l 3e-7,1.900912 c 0.00114,0.529443 0.4871509,1.009097 1.0165631,1.00327 0.5294122,-0.0058 1.0047471,-0.49606 0.9942364,-1.0254 l -3e-7,-1.900912 C 9.0086796,12.507246 8.835413,12.179964 8.5601567,11.996544 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#000000;enable-background:new" nodetypes="cccscccc"/>
+    </g>
+  </g>
+  <g transform="matrix(0,1,-1,0,16,0)">
+    <g transform="translate(-3.2190661e-8,0.03454062)">
+      <path connector-curvature="0" d="M 8.5637629,11.998311 C 7.956401,11.577444 6.9654336,12.121788 6.9948344,12.860133 l 3e-7,1.900912 c 0.00114,0.529443 0.4871509,1.009097 1.0165631,1.00327 0.5294122,-0.0058 1.0047471,-0.49606 0.9942364,-1.0254 l -3e-7,-1.900912 C 9.0086796,12.507246 8.835413,12.179964 8.5601567,11.996544 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#000000;enable-background:new" nodetypes="cccscccc"/>
+    </g>
+    <g transform="translate(-3.2190661e-8,-11.650318)">
+      <path connector-curvature="0" d="M 8.5637629,11.998311 C 7.956401,11.577444 6.9654336,12.121788 6.9948344,12.860133 l 3e-7,1.900912 c 0.00114,0.529443 0.4871509,1.009097 1.0165631,1.00327 0.5294122,-0.0058 1.0047471,-0.49606 0.9942364,-1.0254 l -3e-7,-1.900912 C 9.0086796,12.507246 8.835413,12.179964 8.5601567,11.996544 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#000000;enable-background:new" nodetypes="cccscccc"/>
+    </g>
+  </g>
+</svg>
