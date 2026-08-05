@@ -51,11 +51,5 @@
   <path
      id="path1"
      style="fill:#000000;fill-rule:evenodd;stroke-width:1.5;stroke-linejoin:round;stroke-opacity:0.427451"
-     d="M 8 1 A 7 7 0 0 0 1 8 A 7 7 0 0 0 8 15 A 7 7 0 0 0 15 8 A 7 7 0 0 0 8 1 z M 8 5 A 3 3 0 0 1 11 8 A 3 3 0 0 1 8 11 A 3 3 0 0 1 5 8 A 3 3 0 0 1 8 5 z " />
-  <circle
-     style="fill:#000000;fill-rule:evenodd;stroke-width:1.50001;stroke-linejoin:round;stroke-opacity:0.427451"
-     id="circle1"
-     cx="8"
-     cy="8"
-     r="2.3125" />
+     d="M 8 1 C 4.1340068 1 1 4.1340068 1 8 C 1 11.865993 4.1340068 15 8 15 C 11.865993 15 15 11.865993 15 8 C 15 4.1340068 11.865993 1 8 1 z M 11.087891 4.0097656 L 12.892578 5.9902344 L 6.8925781 11.990234 L 3.1074219 8.2070312 L 5 6.3144531 L 6.8925781 8.2070312 L 11.087891 4.0097656 z " />
 </svg>

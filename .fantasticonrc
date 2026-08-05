@@ -40,6 +40,7 @@ module.exports = {
     "bookmark-checked": 61728,
     "add": 61729,
     "folder": 61730,
-    "folder-open": 61731
+    "folder-open": 61731,
+    "radio-none": 61732
   }
 };

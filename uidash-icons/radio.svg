@@ -51,5 +51,6 @@
   <path
      id="path1"
      style="fill:#000000;fill-rule:evenodd;stroke-width:1.5;stroke-linejoin:round;stroke-opacity:0.427451"
-     d="M 8 1 A 7 7 0 0 0 1 8 A 7 7 0 0 0 8 15 A 7 7 0 0 0 15 8 A 7 7 0 0 0 8 1 z M 8 5 A 3 3 0 0 1 11 8 A 3 3 0 0 1 8 11 A 3 3 0 0 1 5 8 A 3 3 0 0 1 8 5 z " />
+     d="M 8,1 C 4.1340068,1 1,4.1340068 1,8 c 0,3.865993 3.1340068,7 7,7 3.865993,0 7,-3.134007 7,-7 C 15,4.1340068 11.865993,1 8,1 Z"
+     sodipodi:nodetypes="sssss" />
 </svg>
