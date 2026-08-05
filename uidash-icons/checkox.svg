@@ -51,5 +51,6 @@
   <path
      id="rect5"
      style="fill:#000000;fill-rule:evenodd;stroke:#3d3846;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.427451"
-     d="M 1 1 L 1 15 L 15 15 L 15 1 L 1 1 z M 4 4 L 12 4 L 12 12 L 4 12 L 4 4 z " />
+     d="M 1,1 V 15 H 15 V 1 Z M 3,3 H 13 V 13 H 3 Z"
+     sodipodi:nodetypes="cccccccccc" />
 </svg>

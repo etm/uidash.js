@@ -16,7 +16,7 @@ module.exports = {
     "register": 61704,
     "radio": 61705,
     "radio-checked": 61706,
-    "properties": 61707,
+    "operations": 61707,
     "open": 61708,
     "move": 61709,
     "more": 61710,
@@ -41,6 +41,10 @@ module.exports = {
     "add": 61729,
     "folder": 61730,
     "folder-open": 61731,
-    "radio-none": 61732
+    "radio-none": 61732,
+   	"back": 61733,
+	  "properties": 61734,
+	  "reset": 61735,
+	  "send": 61736
   }
 };

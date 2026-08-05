@@ -1,6 +1,6 @@
 @font-face {
     font-family: "uidash-icons";
-    src: url("./uidash-icons.ttf?34e91213687798c6d8b22af867e9f38d") format("truetype");
+    src: url("./uidash-icons.ttf?9dc4d4c314a19abf138612d57331d642") format("truetype");
 }
 
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
@@ -44,7 +44,7 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 .uidash-icon-radio-checked:before {
     content: "\f10a";
 }
-.uidash-icon-properties:before {
+.uidash-icon-operations:before {
     content: "\f10b";
 }
 .uidash-icon-open:before {
@@ -121,4 +121,16 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 }
 .uidash-icon-radio-none:before {
     content: "\f124";
+}
+.uidash-icon-back:before {
+    content: "\f125";
+}
+.uidash-icon-properties:before {
+    content: "\f126";
+}
+.uidash-icon-reset:before {
+    content: "\f127";
+}
+.uidash-icon-send:before {
+    content: "\f128";
 }

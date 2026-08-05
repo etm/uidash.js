@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="32"
-     inkscape:cx="19.625"
-     inkscape:cy="16.65625"
+     inkscape:zoom="8"
+     inkscape:cx="25.625"
+     inkscape:cy="42.625"
      inkscape:window-width="3440"
      inkscape:window-height="1371"
      inkscape:window-x="0"
@@ -51,14 +51,5 @@
   <path
      id="rect5"
      style="fill:#000000;fill-rule:evenodd;stroke:#3d3846;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.427451"
-     d="M 1 1 L 1 15 L 15 15 L 15 1 L 1 1 z M 4 4 L 12 4 L 12 12 L 4 12 L 4 4 z " />
-  <rect
-     style="fill:#000000;fill-rule:evenodd;stroke:#3d3846;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.427451"
-     id="rect6"
-     width="6"
-     height="6"
-     x="5"
-     y="5"
-     rx="7.3012129e-06"
-     ry="4.2417973e-06" />
+     d="M 1 1 L 1 15 L 15 15 L 15 1 L 1 1 z M 3 3 L 13 3 L 13 13 L 3 13 L 3 3 z M 10.474609 4.8183594 L 6.9394531 8.3535156 L 5.5253906 6.9394531 L 4.1113281 8.3535156 L 6.9394531 11.181641 L 11.888672 6.2324219 L 10.474609 4.8183594 z " />
 </svg>
