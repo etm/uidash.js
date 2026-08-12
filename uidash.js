@@ -192,7 +192,7 @@ function uidash_activate_tab(moi) { // {{{
   });
   if (tabbed.hasClass('off')) { tabbed.toggleClass('off'); }
 
-  document.dispatchEvent(new CustomEvent("uidash:activate_tab", {"detail": { "tabbed": tabbed, "active": moi }, "bubbles":true, "cancelable":false}));
+  document.dispatchEvent(new CustomEvent("uidash:activate_tab", {"detail": { "tabbed": tabbed, "active": active }, "bubbles":true, "cancelable":false}));
 } // }}}
 function uidash_toggle_vis_tab(moi) {// {{{
   if ($(moi).length > 0 && $(moi)[0].nodeName == 'UI-TABBED') {
