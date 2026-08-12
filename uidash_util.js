@@ -24,9 +24,9 @@ $.path_join = ((...parts) => {
   return parts
     .map((part, index) => {
       if (index === 0) {
-        return part.trim().replace(/[/]+$/, '');
+        return part.trim().replace(/(?<!:)[/]+$/, '');
       }
-      return part.trim().replace(/^[/]+/, '').replace(/[/]+$/, '');
+      return part.trim().replace(/^[/]+/, '').replace(/(?<!:)[/]+$/, '');
     })
     .filter(x => x.length > 0)
     .join('/');
