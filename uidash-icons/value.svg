@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="70.5"
-     inkscape:cx="7.9929078"
-     inkscape:cy="8"
+     inkscape:zoom="35.25"
+     inkscape:cx="7.7021277"
+     inkscape:cy="10.12766"
      inkscape:window-width="3440"
      inkscape:window-height="1371"
      inkscape:window-x="0"
@@ -48,17 +48,17 @@
        visible="true" />
   </sodipodi:namedview>
   <g
-     transform="matrix(0,1.5557699,-1.5557699,0,1,42.92803)"
+     transform="matrix(0,1.1112642,-1.1112642,0,3,32.948593)"
      id="g3"
-     style="stroke-width:0.642769">
+     style="stroke-width:0.89988">
     <path
        d="m -18.45088,-4 -10e-6,-1 c -3e-5,-0.26531 -0.0931,-0.53058 -0.28124,-0.71876 l -3,-3 -0.281,-0.28 h -0.87499 l -0.28126,0.28126 -3,3 c -0.18821,0.18818 -0.28121,0.45347 -0.28121,0.71876 l -1e-5,1 h 1 c 0.26531,4e-5 0.53059,-0.0931 0.71877,-0.28121 l 2.2812,-2.2813 2.2812,2.2812 c 0.18817,0.18815 0.45345,0.28125 0.71875,0.28125 h 1 z"
-       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.642769"
+       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.89988"
        connector-curvature="0"
        id="path2" />
     <path
        d="m -23.45088,-7 v 7 h 2 v -7 z"
-       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.642769"
+       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.89988"
        connector-curvature="0"
        id="path3" />
   </g>
