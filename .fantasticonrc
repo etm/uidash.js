@@ -45,6 +45,7 @@ module.exports = {
    	"back": 61733,
 	  "properties": 61734,
 	  "reset": 61735,
-	  "send": 61736
+	  "send": 61736,
+	  "attach": 61737
   }
 };
