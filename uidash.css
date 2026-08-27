@@ -315,9 +315,10 @@ body {
   -webkit-transform-origin: 0% 0%;
   -moz-transform: rotate(90deg);
   -moz-transform-origin: left top;
-  margin-left: 1.4em;
-  margin-top: 0.2em;
+  margin-left: -0.1em;
+  background-color: white;
   content: attr(data-label);
+  padding: 0.1em 0.2em;
 }
 
 *[is=x-ui-] ui-content > ui-area {
