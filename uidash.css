@@ -36,6 +36,10 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
   --x-ui-content-border-color: #ffed00;
   --x-ui-content-light-background: #f0f0f0;
   --x-ui-content-hover-background: #99cce660;
+  --x-ui-speech-me-back: #0d57ef;
+  --x-ui-speech-me-front: #ffffff;
+  --x-ui-speech-you-back: var(--x-tab-inactive-color);
+  --x-ui-speech-you-front: var(--x-ui-light-text-color);
 }
 
 ::-webkit-scrollbar {
@@ -140,7 +144,8 @@ body {
   max-height: 0!important;
   min-height: 0!important;
   overflow: hidden!important;
-  border-bottom: 0.2em solid var(--x-ui-border-color)!important;
+  border: 0 none;
+  border-top: 0.2em solid var(--x-ui-border-color)!important;
   border-radius: 0!important;
 }
 *[is=x-ui-] ui-tabbed.off > ui-tabbar > ui-behind {
@@ -316,8 +321,8 @@ body {
   -moz-transform: rotate(90deg);
   -moz-transform-origin: left top;
   margin-left: -0.1em;
-  background-color: white;
   content: attr(data-label);
+  background-color: var(--x-ui-background-color);
   padding: 0.1em 0.2em;
 }
 
