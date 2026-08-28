@@ -36,6 +36,7 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
   --x-ui-content-border-color: #ffed00;
   --x-ui-content-light-background: #f0f0f0;
   --x-ui-content-hover-background: #99cce660;
+  --x-ui-tab-inactive-color: #f0f0f0;
   --x-ui-speech-me-back: #0d57ef;
   --x-ui-speech-me-front: #ffffff;
   --x-ui-speech-you-back: var(--x-tab-inactive-color);
@@ -226,6 +227,7 @@ body {
   background: var(--x-ui-background-color);
 }
 *[is=x-ui-] ui-tabbar > ui-tab.inactive, ui-tabbed > ui-tabbar > ui-tab.switch {
+  background-color: var(--x-ui-tab-inactive-color);
   border: 1pt solid var(--x-ui-border-color);
   border-radius: 0.7em;
   border-bottom-left-radius: 0em;
@@ -322,7 +324,7 @@ body {
   -moz-transform-origin: left top;
   margin-left: -0.1em;
   content: attr(data-label);
-  background-color: var(--x-ui-background-color);
+  background-color: color-mix(in srgb, var(--x-ui-background-color) 90%, transparent);
   padding: 0.1em 0.2em;
 }
 
