@@ -1,6 +1,6 @@
 @font-face {
     font-family: "uidash-icons";
-    src: url("./uidash-icons.ttf?f32332616ba35ca85890003343f1ed01") format("truetype");
+    src: url("./uidash-icons.ttf?3396750caad5d7d283fd0805b5e164e0") format("truetype");
 }
 
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
@@ -50,7 +50,7 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 .uidash-icon-open:before {
     content: "\f10c";
 }
-.uidash-icon-move:before {
+.uidash-icon-reposition:before {
     content: "\f10d";
 }
 .uidash-icon-more:before {
@@ -136,4 +136,13 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 }
 .uidash-icon-attach:before {
     content: "\f129";
+}
+.uidash-icon-copy:before {
+    content: "\f12a";
+}
+.uidash-icon-move:before {
+    content: "\f12b";
+}
+.uidash-icon-shift:before {
+    content: "\f12c";
 }

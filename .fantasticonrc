@@ -18,7 +18,7 @@ module.exports = {
     "radio-checked": 61706,
     "operations": 61707,
     "open": 61708,
-    "move": 61709,
+    "reposition": 61709,
     "more": 61710,
     "menu": 61711,
     "logout": 61712,
@@ -46,6 +46,9 @@ module.exports = {
 	  "properties": 61734,
 	  "reset": 61735,
 	  "send": 61736,
-	  "attach": 61737
+	  "attach": 61737,
+	  "copy": 61738,
+	  "move": 61739,
+	  "shift": 61740
   }
 };
