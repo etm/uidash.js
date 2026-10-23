@@ -49,6 +49,7 @@ module.exports = {
 	  "attach": 61737,
 	  "copy": 61738,
 	  "move": 61739,
-	  "shift": 61740
+	  "shift": 61740,
+	  "subprocess": 61741
   }
 };
