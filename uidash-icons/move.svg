@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="10.116561"
-     inkscape:cx="-5.3377824"
-     inkscape:cy="-6.0297172"
+     inkscape:zoom="20.940828"
+     inkscape:cx="6.255722"
+     inkscape:cy="10.07601"
      inkscape:window-width="1366"
      inkscape:window-height="699"
      inkscape:window-x="0"
@@ -68,26 +68,8 @@
        id="guide4"
        inkscape:locked="false" />
   </sodipodi:namedview>
-  <g
-     transform="matrix(0,1.1112642,-1.1112642,0,5.0000002,33.414176)"
-     id="g3"
-     style="stroke-width:0.89988">
-    <path
-       d="m -18.851335,-4.5005799 -10e-6,-1 c -3e-5,-0.26531 -0.0931,-0.53058 -0.28124,-0.71876 l -2.599545,-2.4994201 -0.281,-0.28 h -0.87499 l -0.28126,0.28126 -2.599544,2.4993601 c -0.18821,0.18818 -0.28121,0.45347 -0.28121,0.71876 l -10e-6,1 h 1 c 0.26531,4e-5 0.53059,-0.0931 0.71877,-0.28121 l 1.880744,-1.7806601 1.880745,1.7806201 c 0.18817,0.18815 0.45345,0.28125 0.71875,0.28125 h 1 z"
-       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.89988"
-       connector-curvature="0"
-       id="path2"
-       sodipodi:nodetypes="ccccccccccccccscc" />
-    <path
-       d="m -23.45088,-6.5218835 v 6.99999999 h 2 V -6.5218835 Z"
-       style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:0.89988"
-       connector-curvature="0"
-       id="path3"
-       sodipodi:nodetypes="ccccc" />
-  </g>
   <path
-     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;enable-background:accumulate;stop-color:#000000"
-     d="M 1,4.4655839 V 12.465584 H 9 V 4.4655839 Z m 2,2 H 7 V 10.465584 H 3 Z"
-     id="rect1"
-     sodipodi:nodetypes="cccccccccc" />
+     id="path2"
+     style="color:#000000;text-indent:0;text-transform:none;fill:#000000;stroke-width:1"
+     d="M 1 4.4648438 L 1 12.464844 L 9 12.464844 L 9 9.5761719 L 11.238281 9.5761719 L 10.3125 10.554688 C 10.103416 10.763795 10 11.058698 10 11.353516 L 10 12.464844 L 10.001953 12.464844 L 11.113281 12.464844 C 11.40811 12.464811 11.702991 12.361417 11.912109 12.152344 L 14.689453 9.2636719 L 15 8.9511719 L 15 7.9785156 L 14.6875 7.6660156 L 11.910156 4.7773438 C 11.701039 4.5681927 11.406135 4.4648438 11.111328 4.4648438 L 10 4.4648438 L 10 5.5761719 C 9.9999556 5.8710014 10.10346 6.1658823 10.3125 6.375 L 11.238281 7.3535156 L 9 7.3535156 L 9 4.4648438 L 1 4.4648438 z M 3 6.4648438 L 7 6.4648438 L 7 7.3535156 L 4.46875 7.3535156 L 4.46875 9.5761719 L 7 9.5761719 L 7 10.464844 L 3 10.464844 L 3 6.4648438 z M 12.248047 8.4199219 L 12.291016 8.4648438 L 12.248047 8.5097656 L 12.248047 8.4199219 z " />
 </svg>
