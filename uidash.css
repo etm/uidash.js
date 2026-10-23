@@ -20,6 +20,9 @@
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
   vertical-align: -3.5px;
 }
+i.uidash-text:before {
+  vertical-align: -1.8px;
+}
 
 @font-face {
   font-family: adwaita-sans;
