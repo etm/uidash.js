@@ -41,21 +41,21 @@ function CustomMenu(e) {
   this.contextmenu = function(items) {
     remove = function(event) {
       if (!event) {
-        $('.contextmenu:first').remove();
-        $('body', document).unbind('mousedown',remove);
+        $('.contextmenu').first().remove();
+        $('body', document).off('mousedown',remove);
         return;
       }
 
-      if($(event.target).parent('tr.contextmenuitem') && (event.button == 0)) { $(event.target).click(); }
-      $('.contextmenu:first').remove();
-      $('body', document).unbind('mousedown',remove);
+      if($(event.target).parent('tr.contextmenuitem') && (event.button == 0)) { $(event.target).trigger('click'); }
+      $('.contextmenu').first().remove();
+      $('body', document).off('mousedown',remove);
     }
-    $('body', document).bind('mousedown',remove);
+    $('body', document).on('mousedown',remove);
 
     if($('div.contextmenu').length > 0) remove();
     var div = $('<div class="contextmenu" oncontextmenu="return false"><table class="contextmenu"/></div>');
     for(head in items) {
-      div.children(':first').append('<tr class="contextmenuheader"><td colspan="2">' + head + '</td></tr>');
+      div.children().first().append('<tr class="contextmenuheader"><td colspan="2">' + head + '</td></tr>');
       for(item of items[head]) {
         var icon = null;
         if(item.menu_icon) {
@@ -69,8 +69,8 @@ function CustomMenu(e) {
           icon = item.text_icon;
         }
         var row = $('<tr class="contextmenuitem"><td class="contextmenuicon"><div>' + (icon == null ? '' : icon) + '</div></td><td class="' + (item.class ? ' ' + item.class: '') + '">' + item.label + '</td></tr>');
-        div.children(':first').append(row);
-        row.bind('click', item, function(event){
+        div.children().first().append(row);
+        row.on('click', null, item, function(event){
           event.data.function_call.apply(null, event.data.params);
         });
       }
@@ -82,11 +82,11 @@ function CustomMenu(e) {
 
   this.menu = function(menu,call) {
     remove = function(event) {
-      if ($(event.target).parent('div.menu') && (event.button == 0)) { $(event.target).click(); }
+      if ($(event.target).parent('div.menu') && (event.button == 0)) { $(event.target).trigger('click'); }
       menu.hide();
-      $('body', document).unbind('mousedown',remove);
+      $('body', document).off('mousedown',remove);
       $("div.menuitem",$(menu)).each(function(ind,ele){
-        $(ele).unbind('click',mitemclick);
+        $(ele).off('click',mitemclick);
       });
     }
 
@@ -96,10 +96,10 @@ function CustomMenu(e) {
       $(ele.target).attr('data-selected','selected');
       call(ele.target);
     };
-    $('body', document).bind('mousedown',remove);
+    $('body', document).on('mousedown',remove);
 
     $("div.menuitem",$(menu)).each(function(ind,ele){
-      $(ele).bind('click',mitemclick);
+      $(ele).on('click',mitemclick);
     });
 
     menu.css({'min-width': target.width()});

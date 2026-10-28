@@ -45,6 +45,24 @@ $.pressCtrl = (() => {
   return !(/Mac|iPhone|iPod|iPad/i.test(navigator.platform));
 });
 
+// replacement for $.browser (removed in jquery 1.9), only name and version.
+// Safari reports its WebKit version (e.g. 605), not the marketing version.
+if (!$.browser) {
+  $.browser = (() => {
+    const ua = navigator.userAgent;
+    const tests = [
+      ['Firefox', /Firefox\/([\d.]+)/],
+      ['Chrome',  /Chrom(?:e|ium)\/([\d.]+)/],
+      ['Safari',  /AppleWebKit\/([\d.]+)/]
+    ];
+    for (const [name, re] of tests) {
+      const m = ua.match(re);
+      if (m) { return { name: name, version: parseFloat(m[1]) }; }
+    }
+    return { name: 'unknown', version: 0 };
+  })();
+}
+
 $.fn.to_em_raw = function(settings){
   settings = jQuery.extend({
       scope: 'body'
