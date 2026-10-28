@@ -118,8 +118,33 @@ $.fn.set_val = function (val) {
     $(this).text(val);
   }
 };
+// indents a copy of the DOM and lets XMLSerializer do namespaces and escaping.
+// Elements with text or mixed content are kept as is, whitespace between
+// elements is dropped, so differently indented input gives the same output.
 $.fn.serializePrettyXML = function () {
-  return vkbeautify.xml(this.serializeXML(),'  ');
+  const xs = new XMLSerializer();
+  const indent = (node, depth) => {
+    const kids = Array.from(node.childNodes);
+    if (kids.some(c => (c.nodeType == Node.TEXT_NODE && c.nodeValue.trim() != '') || c.nodeType == Node.CDATA_SECTION_NODE)) { return; }
+    kids.forEach(c => {
+      if (c.nodeType == Node.TEXT_NODE) { node.removeChild(c); return; }
+      node.insertBefore(node.ownerDocument.createTextNode('\n' + '  '.repeat(depth + 1)), c);
+      if (c.nodeType == Node.ELEMENT_NODE) { indent(c, depth + 1); }
+    });
+    if (node.childNodes.length > 0) {
+      node.appendChild(node.ownerDocument.createTextNode('\n' + '  '.repeat(depth)));
+    }
+  };
+  const out = [];
+  this.each(function() {
+    const top = this.nodeType == Node.DOCUMENT_NODE ? Array.from(this.childNodes) : [this];
+    top.forEach(n => {
+      const c = n.cloneNode(true);
+      if (c.nodeType == Node.ELEMENT_NODE) { indent(c, 0); }
+      out.push(xs.serializeToString(c));
+    });
+  });
+  return out.join('\n');
 };
 
 $.fn.serializeXML = function () {
