@@ -1,6 +1,6 @@
 {
   "name": "uidashjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple UI lib used by the Cloud Process Execution Engine (cpee.org) and its friends.",
   "keywords": ["ui", "tabs", "dashboard", "jquery", "cpee"],
   "homepage": "https://github.com/etm/uidash.js",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/etm/uidash.js.git"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "LGPL-3.0-or-later",
   "author": "Juergen \"eTM\" Mangler <juergen.mangler@gmail.com>",
   "contributors": [
     "Heinrich \"Junior\" Fenkart"
@@ -26,7 +26,8 @@
     "uidash-icons.html",
     "AdwaitaSans-Regular.ttf",
     "AdwaitaSans-Regular.ttf.License",
-    "AUTHORS"
+    "AUTHORS",
+    "COPYING.LESSER"
   ],
   "dependencies": {
     "jquery": "^3.3.1 || ^4.0.0"
