@@ -26,8 +26,7 @@
     "uidash-icons.html",
     "AdwaitaSans-Regular.ttf",
     "AdwaitaSans-Regular.ttf.License",
-    "AUTHORS",
-    "COPYING.LESSER"
+    "AUTHORS"
   ],
   "dependencies": {
     "jquery": "^3.3.1 || ^4.0.0"
