@@ -14,7 +14,7 @@
 */
 
 ui-dialogue {
-  /* in em, without unit, because uidash_dialogue.js reads them too */
+  /* in em, without unit, because uidash_dialogue.js reads them */
   --x-ui-dialogue-arrow: 0.7;   /* length of the arrow */
   --x-ui-dialogue-inset: 1.7;   /* arrow tip to the corner of the bubble */
 
@@ -30,8 +30,7 @@ ui-dialogue {
   max-width: 28em;
   min-width: calc(var(--x-ui-dialogue-inset) * 2em);
   min-height: calc(var(--x-ui-dialogue-inset) * 2em);
-  /* no right padding, the contents have it, so their scrollbar is at the edge. */
-  padding: 1.2em 0 0.8em 1.5em;
+  padding: 1.2em 0 0.8em 0;
   line-height: 1.2em;
   color: var(--x-ui-light-text-color);
   background-color: var(--x-ui-background-color);
@@ -50,35 +49,10 @@ ui-dialogue > ui-dialogue-content {
   flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
+  padding-left: 1.5em;
   padding-right: 1.5em;
 }
-/* thin scrollbar in the border colour, without a track background, also when hovering */
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar {
-  width: 0.7em;
-  height: 0.7em;
-  background: transparent;
-}
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar-track,
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar-track:hover,
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar-corner {
-  background: transparent;
-}
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar-thumb,
-ui-dialogue > ui-dialogue-content::-webkit-scrollbar-thumb:hover {
-  border-radius: 0.7em;
-  border: 0.2em solid transparent;
-  background: var(--x-ui-border-color);
-  background-clip: content-box;
-}
-/* firefox has no ::-webkit-scrollbar, only the colours (width stays auto). Not
-   for chrome, where scrollbar-color would switch off the rules above. */
-@supports not selector(::-webkit-scrollbar) {
-  ui-dialogue > ui-dialogue-content {
-    scrollbar-color: var(--x-ui-border-color) transparent;
-  }
-}
 
-/* the padding of the bubble already gives room, so halve the default 1em margins */
 ui-dialogue > ui-dialogue-content > :is(p, ul, ol, dl, pre, blockquote):first-child {
   margin-top: 0.5em;
 }
@@ -96,7 +70,6 @@ ui-dialogue.open > ui-close {
   color: var(--x-ui-border-color);
   cursor: pointer;
 }
-/* uidash.css moves icons down, which would make the button reach into the contents */
 ui-dialogue > ui-close > i[class^="uidash-icon-"]::before {
   vertical-align: top;
 }
@@ -104,7 +77,6 @@ ui-dialogue.open > ui-close:hover {
   color: var(--x-ui-light-text-color);
 }
 
-/* the arrow: ::before is the border, ::after the inside, moved inwards by the border width */
 ui-dialogue::before, ui-dialogue::after {
   content: "";
   position: absolute;

@@ -49,9 +49,11 @@ i.uidash-text:before {
 ::-webkit-scrollbar {
   width: 0.7em;
   height: 0.7em;
+  background: transparent;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track:hover {
   background: transparent;
 }
 
@@ -70,6 +72,12 @@ i.uidash-text:before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--x-ui-border-color);
   background-clip: content-box;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  :root {
+    scrollbar-color: var(--x-ui-border-color) transparent;
+  }
 }
 
 body {
@@ -95,6 +103,12 @@ body {
   font-family: adwaita-sans;
   font-size: 1em;
   resize: none;
+}
+/* the focus ring is drawn inside the element (negative offset), so it is not
+   cut off by containers that scroll or hide their overflow */
+*[is=x-ui-] textarea:focus-visible, *[is=x-ui-] input:focus-visible, *[is=x-ui-] select:focus-visible, *[is=x-ui-] button:focus-visible {
+  outline: 2px solid var(--x-ui-focus-color, Highlight);
+  outline-offset: -2px;
 }
 
 *[is=x-ui-] button, *[is=x-ui-] select {

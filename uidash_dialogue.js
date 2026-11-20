@@ -39,16 +39,27 @@ function uidash_dialogue_place(dlg, target) { // {{{
   dlg.css({ 'max-width': '', 'max-height': '' });
   const w = dlg.outerWidth(), h = dlg.outerHeight();
 
-  // room along the side with the arrow, depending on where the arrow sits
-  const space = (align, c, lo, hi) => {
-    if (align == 'top' || align == 'left') { return c - inset < lo ? 0 : hi - (c - inset); }
-    if (align == 'middle') { return 2 * Math.min(c - lo, hi - c); }
-    return c + inset > hi ? 0 : c + inset - lo;
+  // the bubble can't get smaller than its min-width/min-height
+  const minw = parseFloat(style.minWidth) || 0, minh = parseFloat(style.minHeight) || 0;
+
+  // where the arrow points: the middle of the target, or, if the bubble would leave
+  // the window that way, as far from the middle as needed, but still at the target
+  const anchor = (align, c, lo, hi, start, end) => {
+    if ((align == 'top' || align == 'left') && c - inset < lo) { return lo + inset <= end ? lo + inset : null; }
+    if ((align == 'bottom' || align == 'right') && c + inset > hi) { return hi - inset >= start ? hi - inset : null; }
+    return c;
   };
-  const along = (align, c, size) => {
-    if (align == 'top' || align == 'left') { return c - inset; }
-    if (align == 'middle') { return c - size / 2; }
-    return c - size + inset;
+  // room along the side with the arrow, depending on where the arrow sits
+  const space = (align, a, lo, hi) => {
+    if (a === null) { return 0; }
+    if (align == 'top' || align == 'left') { return hi - (a - inset); }
+    if (align == 'middle') { return 2 * Math.min(a - lo, hi - a); }
+    return a + inset - lo;
+  };
+  const along = (align, a, size) => {
+    if (align == 'top' || align == 'left') { return a - inset; }
+    if (align == 'middle') { return a - size / 2; }
+    return a - size + inset;
   };
 
   // the first position that fits wins. If none fits, the one that keeps most
@@ -56,16 +67,22 @@ function uidash_dialogue_place(dlg, target) { // {{{
   let best;
   for (const pos of uidash_dialogue_positions) {
     const [side, align] = pos.split('-');
-    let rw, rh;
-    if (side == 'left')   { rw = vr - (t.left + t.width + arrow); rh = space(align, cy, vt, vb); }
-    if (side == 'right')  { rw = t.left - arrow - vl;             rh = space(align, cy, vt, vb); }
-    if (side == 'top')    { rh = vb - (t.top + t.height + arrow); rw = space(align, cx, vl, vr); }
-    if (side == 'bottom') { rh = t.top - arrow - vt;              rw = space(align, cx, vl, vr); }
+    let rw, rh, a;
+    if (side == 'left' || side == 'right') {
+      a = anchor(align, cy, vt, vb, t.top, t.top + t.height);
+      rh = space(align, a, vt, vb);
+      rw = side == 'left' ? vr - (t.left + t.width + arrow) : t.left - arrow - vl;
+    } else {
+      a = anchor(align, cx, vl, vr, t.left, t.left + t.width);
+      rw = space(align, a, vl, vr);
+      rh = side == 'top' ? vb - (t.top + t.height + arrow) : t.top - arrow - vt;
+    }
     rw = Math.max(0, rw);
     rh = Math.max(0, rh);
-    const kept = Math.min(w, rw) * Math.min(h, rh);
+    // less room than the smallest bubble: unusable
+    const kept = rw < minw || rh < minh ? 0 : Math.min(w, rw) * Math.min(h, rh);
     // ties (up to rounding) keep the earlier position
-    if (!best || kept > best.kept + 0.5) { best = { pos: pos, rw: rw, rh: rh, kept: kept }; }
+    if (!best || kept > best.kept + 0.5) { best = { pos: pos, a: a === null ? (side == 'left' || side == 'right' ? cy : cx) : a, rw: rw, rh: rh, kept: kept }; }
     if (rw >= w && rh >= h) { break; }
   }
   if (best.rw < w || best.rh < h) {
@@ -76,10 +93,10 @@ function uidash_dialogue_place(dlg, target) { // {{{
   const [side, align] = best.pos.split('-');
   const fw = dlg.outerWidth(), fh = dlg.outerHeight();
   let left, top;
-  if (side == 'left')   { left = t.left + t.width + arrow; top = along(align, cy, fh); }
-  if (side == 'right')  { left = t.left - arrow - fw;      top = along(align, cy, fh); }
-  if (side == 'top')    { top = t.top + t.height + arrow;  left = along(align, cx, fw); }
-  if (side == 'bottom') { top = t.top - arrow - fh;        left = along(align, cx, fw); }
+  if (side == 'left')   { left = t.left + t.width + arrow; top = along(align, best.a, fh); }
+  if (side == 'right')  { left = t.left - arrow - fw;      top = along(align, best.a, fh); }
+  if (side == 'top')    { top = t.top + t.height + arrow;  left = along(align, best.a, fw); }
+  if (side == 'bottom') { top = t.top - arrow - fh;        left = along(align, best.a, fw); }
   dlg.attr('data-position', best.pos);
   dlg.offset({ left: left, top: top });
 } // }}}
