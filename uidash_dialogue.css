@@ -1,0 +1,164 @@
+/*
+  This file is part of UIDASH.JS.
+
+  UIDASH.JS is free software: you can redistribute it and/or modify it under the terms
+  of the GNU Lesser General Public License as published by the Free Software Foundation,
+  either version 3 of the License, or (at your option) any later version.
+
+  UIDASH.JS is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+  PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public License along with
+  UIDASH.JS. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+ui-dialogue {
+  /* in em, without unit, because uidash_dialogue.js reads them too */
+  --x-ui-dialogue-arrow: 0.7;   /* length of the arrow */
+  --x-ui-dialogue-inset: 1.7;   /* arrow tip to the corner of the bubble */
+
+  --x-ui-dialogue-a: calc(var(--x-ui-dialogue-arrow) * 1em);
+  --x-ui-dialogue-o: calc(var(--x-ui-dialogue-inset) * 1em - var(--x-ui-dialogue-a) - 1pt);
+
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  box-sizing: border-box;
+  /* not shrink-to-fit, which depends on the position and could make repositioning flip */
+  width: max-content;
+  max-width: 28em;
+  min-width: calc(var(--x-ui-dialogue-inset) * 2em);
+  min-height: calc(var(--x-ui-dialogue-inset) * 2em);
+  /* no right padding, the contents have it, so their scrollbar is at the edge. */
+  padding: 1.2em 0 0.8em 1.5em;
+  line-height: 1.2em;
+  color: var(--x-ui-light-text-color);
+  background-color: var(--x-ui-background-color);
+  border: 1pt solid var(--x-ui-border-color);
+  border-radius: 1em;
+  box-shadow: 0 0.125em 0.5em var(--x-ui-border-color);
+}
+ui-dialogue.open {
+  display: flex;
+  flex-direction: column;
+}
+
+/* scrolls when the size of the dialogue is restricted (width, height, max-height) */
+ui-dialogue > ui-dialogue-content {
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 1.5em;
+}
+/* thin scrollbar in the border colour, without a track background, also when hovering */
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar {
+  width: 0.7em;
+  height: 0.7em;
+  background: transparent;
+}
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar-track,
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar-track:hover,
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar-corner {
+  background: transparent;
+}
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar-thumb,
+ui-dialogue > ui-dialogue-content::-webkit-scrollbar-thumb:hover {
+  border-radius: 0.7em;
+  border: 0.2em solid transparent;
+  background: var(--x-ui-border-color);
+  background-clip: content-box;
+}
+/* firefox has no ::-webkit-scrollbar, only the colours (width stays auto). Not
+   for chrome, where scrollbar-color would switch off the rules above. */
+@supports not selector(::-webkit-scrollbar) {
+  ui-dialogue > ui-dialogue-content {
+    scrollbar-color: var(--x-ui-border-color) transparent;
+  }
+}
+
+/* the padding of the bubble already gives room, so halve the default 1em margins */
+ui-dialogue > ui-dialogue-content > :is(p, ul, ol, dl, pre, blockquote):first-child {
+  margin-top: 0.5em;
+}
+ui-dialogue > ui-dialogue-content > :is(p, ul, ol, dl, pre, blockquote):last-child {
+  margin-bottom: 0.5em;
+}
+
+ui-dialogue.open > ui-close {
+  position: absolute;
+  top: 0.45em;
+  right: 0.45em;
+  margin: 0;
+  font-size: 0.8em;
+  line-height: 1;
+  color: var(--x-ui-border-color);
+  cursor: pointer;
+}
+/* uidash.css moves icons down, which would make the button reach into the contents */
+ui-dialogue > ui-close > i[class^="uidash-icon-"]::before {
+  vertical-align: top;
+}
+ui-dialogue.open > ui-close:hover {
+  color: var(--x-ui-light-text-color);
+}
+
+/* the arrow: ::before is the border, ::after the inside, moved inwards by the border width */
+ui-dialogue::before, ui-dialogue::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: var(--x-ui-dialogue-a) solid transparent;
+}
+ui-dialogue::before {
+  --c: var(--x-ui-border-color);
+  --d: 1pt;
+}
+ui-dialogue::after {
+  --c: var(--x-ui-background-color);
+  --d: -0.5pt;
+}
+
+ui-dialogue[data-position^=left]::before, ui-dialogue[data-position^=left]::after {
+  right: calc(100% + var(--d));
+  border-left: none;
+  border-right-color: var(--c);
+}
+ui-dialogue[data-position^=right]::before, ui-dialogue[data-position^=right]::after {
+  left: calc(100% + var(--d));
+  border-right: none;
+  border-left-color: var(--c);
+}
+ui-dialogue[data-position^=top]::before, ui-dialogue[data-position^=top]::after {
+  bottom: calc(100% + var(--d));
+  border-top: none;
+  border-bottom-color: var(--c);
+}
+ui-dialogue[data-position^=bottom]::before, ui-dialogue[data-position^=bottom]::after {
+  top: calc(100% + var(--d));
+  border-bottom: none;
+  border-top-color: var(--c);
+}
+
+ui-dialogue[data-position$=-top]::before, ui-dialogue[data-position$=-top]::after {
+  top: var(--x-ui-dialogue-o);
+}
+ui-dialogue[data-position=left-middle]::before, ui-dialogue[data-position=left-middle]::after,
+ui-dialogue[data-position=right-middle]::before, ui-dialogue[data-position=right-middle]::after {
+  top: calc(50% - var(--x-ui-dialogue-a));
+}
+ui-dialogue[data-position$=-bottom]::before, ui-dialogue[data-position$=-bottom]::after {
+  bottom: var(--x-ui-dialogue-o);
+}
+ui-dialogue[data-position$=-left]::before, ui-dialogue[data-position$=-left]::after {
+  left: var(--x-ui-dialogue-o);
+}
+ui-dialogue[data-position=top-middle]::before, ui-dialogue[data-position=top-middle]::after,
+ui-dialogue[data-position=bottom-middle]::before, ui-dialogue[data-position=bottom-middle]::after {
+  left: calc(50% - var(--x-ui-dialogue-a));
+}
+ui-dialogue[data-position$=-right]::before, ui-dialogue[data-position$=-right]::after {
+  right: var(--x-ui-dialogue-o);
+}
