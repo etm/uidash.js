@@ -162,11 +162,8 @@ $.fn.serializeXML = function () {
   return out;
 };
 
-String.prototype.repeat = function(num) {
-  return new Array(num + 1).join(this);
-};
-
-String.prototype.unserialize = function() {
+// not enumerable, so they don't show up in for..in loops over strings and arrays
+Object.defineProperty(String.prototype, 'unserialize', { writable: true, configurable: true, value: function() {
   var data = this.split("&");
   var ret = new Array();
   $.each(data, function(){
@@ -174,16 +171,16 @@ String.prototype.unserialize = function() {
       ret.push([properties[0], properties[1]]);
   });
   return ret;
-};
+}});
 
-Array.prototype.sample = function(){
+Object.defineProperty(Array.prototype, 'sample', { writable: true, configurable: true, value: function(){
   return this[Math.floor(Math.random()*this.length)];
-}
-Array.prototype.remove = function(value){
+}});
+Object.defineProperty(Array.prototype, 'remove', { writable: true, configurable: true, value: function(value){
   return this.filter(function(ele){
     return ele != value;
   });
-}
+}});
 
 $XR = function(xmlstr) {
   if (typeof xmlstr == "string") {

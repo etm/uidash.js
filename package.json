@@ -21,6 +21,8 @@
     "uidash_util.js",
     "uidash_custommenu.js",
     "uidash_custommenu.css",
+    "uidash_dialogue.js",
+    "uidash_dialogue.css",
     "uidash-icons.css",
     "uidash-icons.ttf",
     "uidash-icons.html",

@@ -19,12 +19,12 @@ div.contextmenu, div.menu {
   z-index: 100000;
   position: absolute;
   display:none;
-  background: Menu;
-  border: 1px solid #a1a1a1;
+  background: var(--x-ui-background-color);
+  border: 1px solid var(--x-ui-border-color);
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
-  box-shadow: 0.1em 0.1em 0.1em #a1a1a1;
+  box-shadow: 0.1em 0.1em 0.1em var(--x-ui-border-color);
   cursor: pointer;
   user-select: none;
 }
@@ -39,7 +39,7 @@ table.contextmenu {
 
 tr.contextmenuheader {
   font-style:italic;
-  color: #a1a1a1;
+  color: var(--x-ui-border-color);
   font-size: small;
   white-space: nowrap;
 }
@@ -49,7 +49,7 @@ tr.contextmenuheader > td{
   padding-right: 1em;
 }
 tr.contextmenuheader:not(:first-child) {
-  border-top: 1px solid #a1a1a1;
+  border-top: 1px solid var(--x-ui-border-color);
 }
 
 div.menu > div {
@@ -58,12 +58,12 @@ div.menu > div {
 
 tr.contextmenuitem, div.menu > div {
   font-size: small;
-  color: #333;
+  color: var(--x-ui-light-text-color);
   line-height: 1.4em;
 }
 tr.contextmenuitem:hover, div.menu > div:hover {
-  background-color:Highlight;
-  color: HighlightText;
+  background-color: var(--x-ui-content-hover-background);
+  color: var(--x-ui-light-text-color);
 }
 tr.contextmenuitem > td, div.menu > div {
   padding: 0;

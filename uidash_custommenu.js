@@ -17,7 +17,8 @@ function CustomMenu(e) {
   var target = $(e.target);
   var off = target.offset();
   var remove = function(event) {};
-  this.remove = remove;
+  // contextmenu() and menu() replace remove, so always call the current one
+  this.remove = function() { remove(); };
   e.stopPropagation();
 
   var place = function(div,left,right,top) { // left, right: borders of the element the menu belongs to
@@ -39,24 +40,23 @@ function CustomMenu(e) {
   };
 
   this.contextmenu = function(items) {
-    remove = function(event) {
-      if (!event) {
-        $('.contextmenu').first().remove();
-        $('body', document).off('mousedown',remove);
-        return;
-      }
+    // only one context menu at a time, close the open one with its own remove
+    if (CustomMenu.open_contextmenu) { CustomMenu.open_contextmenu(); }
 
-      if($(event.target).parent('tr.contextmenuitem') && (event.button == 0)) { $(event.target).trigger('click'); }
-      $('.contextmenu').first().remove();
+    remove = function(event) {
+      // a left mousedown on an item selects it (only there, not on things outside the menu)
+      if (event && event.button == 0 && $(event.target).closest('tr.contextmenuitem').length > 0) { $(event.target).trigger('click'); }
+      div.remove();
       $('body', document).off('mousedown',remove);
+      if (CustomMenu.open_contextmenu === remove) { CustomMenu.open_contextmenu = null; }
     }
     $('body', document).on('mousedown',remove);
+    CustomMenu.open_contextmenu = remove;
 
-    if($('div.contextmenu').length > 0) remove();
     var div = $('<div class="contextmenu" oncontextmenu="return false"><table class="contextmenu"/></div>');
-    for(head in items) {
+    for (const head in items) {
       div.children().first().append('<tr class="contextmenuheader"><td colspan="2">' + head + '</td></tr>');
-      for(item of items[head]) {
+      for (const item of items[head]) {
         var icon = null;
         if(item.menu_icon) {
           icon = $X('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
@@ -82,7 +82,8 @@ function CustomMenu(e) {
 
   this.menu = function(menu,call) {
     remove = function(event) {
-      if ($(event.target).parent('div.menu') && (event.button == 0)) { $(event.target).trigger('click'); }
+      // a left mousedown in the menu selects the item (only there, not on things outside the menu)
+      if (event && event.button == 0 && $(event.target).closest(menu).length > 0) { $(event.target).trigger('click'); }
       menu.hide();
       $('body', document).off('mousedown',remove);
       $("div.menuitem",$(menu)).each(function(ind,ele){
