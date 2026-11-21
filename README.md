@@ -161,6 +161,9 @@ uidash_util.js:
   `$XR(xmlstring)` into an xml document.
 * `.serializeXML()` turns it back into a string, `.serializePrettyXML()`
   indented.
+* `$.strip_xmlns(xmlstring, ns)` removes `xmlns="..."` for a namespace, a list
+  of them, or all (without `ns`). Elements serialized on their own get the
+  namespace of their parent, this removes it again.
 * `.get_val()` and `.set_val(value)` read and write inputs, checkboxes, radio
   buttons, selects, textareas, lists (one line per item) and other elements
   (as text).

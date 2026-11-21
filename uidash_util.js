@@ -162,6 +162,15 @@ $.fn.serializeXML = function () {
   return out;
 };
 
+$.strip_xmlns = ((text, ns) => {
+  const list = ns === undefined ? null : [].concat(ns);
+  return text.replace(/<[A-Za-z_][^<>]*>/g, (tag) => {
+    return tag.replace(/\s+xmlns\s*=\s*(["'])(.*?)\1/g, (decl, quote, uri) => {
+      return list === null || list.includes(uri) ? '' : decl;
+    });
+  });
+});
+
 // not enumerable, so they don't show up in for..in loops over strings and arrays
 Object.defineProperty(String.prototype, 'unserialize', { writable: true, configurable: true, value: function() {
   var data = this.split("&");
@@ -182,16 +191,30 @@ Object.defineProperty(Array.prototype, 'remove', { writable: true, configurable:
   });
 }});
 
+// like $.parseXML, but throws only the message of the parser: chrome wraps it
+// into prose, firefox adds the url of the page and the source line. An empty
+// string throws as well.
+function uidash_parse_xml(xmlstr) {
+  const doc = new DOMParser().parseFromString(xmlstr, "text/xml");
+  const err = doc.getElementsByTagName("parsererror")[0];
+  if (err) {
+    const div = err.querySelector("div");
+    const msg = div ? div.textContent : err.firstChild ? err.firstChild.textContent : err.textContent;
+    throw new Error(msg.replace(/\nLocation: .*/, "").trim());
+  }
+  return doc;
+}
+
 $XR = function(xmlstr) {
   if (typeof xmlstr == "string") {
-    return $.parseXML(xmlstr);
+    return uidash_parse_xml(xmlstr);
   } else {
     return $(xmlstr.ownerDocument || xmlstr);
   }
 };
 
 $X = function(xmlstr) {
-  return $($.parseXML(xmlstr).documentElement);
+  return $(uidash_parse_xml(xmlstr).documentElement);
 };
 
 $UUID = function() {
