@@ -26,8 +26,8 @@
      inkscape:zoom="70.5"
      inkscape:cx="8"
      inkscape:cy="8"
-     inkscape:window-width="3440"
-     inkscape:window-height="1371"
+     inkscape:window-width="1692"
+     inkscape:window-height="1051"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -49,7 +49,7 @@
   </sodipodi:namedview>
   <path
      style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.875px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 11.31579,9.3421052 V 5.6578948 H 15 v 3.6842104 z m -5.1502265,0 V 5.6578948 h 3.684211 V 9.3421052 Z M 1,9.3421052 V 5.6578948 h 3.6842105 v 3.6842104 z"
+     d="M 11.31579,9.8421052 V 6.1578948 H 15 v 3.6842104 z m -5.1502265,0 V 6.1578948 h 3.684211 V 9.8421052 Z M 1,9.8421052 V 6.1578948 h 3.6842105 v 3.6842104 z"
      connector-curvature="0"
      id="path1" />
 </svg>

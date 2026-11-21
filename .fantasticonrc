@@ -50,6 +50,8 @@ module.exports = {
 	  "copy": 61738,
 	  "move": 61739,
 	  "shift": 61740,
-	  "subprocess": 61741
+	  "subprocess": 61741,
+	  "morev": 61742,
+	  "versioning": 61743
   }
 };

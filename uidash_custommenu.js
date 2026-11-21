@@ -44,8 +44,12 @@ function CustomMenu(e) {
     if (CustomMenu.open_contextmenu) { CustomMenu.open_contextmenu(); }
 
     remove = function(event) {
-      // a left mousedown on an item selects it (only there, not on things outside the menu)
-      if (event && event.button == 0 && $(event.target).closest('tr.contextmenuitem').length > 0) { $(event.target).trigger('click'); }
+      // a left mousedown on an item selects it (only there, not on things outside the menu).
+      // It is used up by the menu, so it does not close what the item opens (e.g. a dialogue).
+      if (event && event.button == 0 && $(event.target).closest('tr.contextmenuitem').length > 0) {
+        $(event.target).trigger('click');
+        event.stopPropagation();
+      }
       div.remove();
       $('body', document).off('mousedown',remove);
       if (CustomMenu.open_contextmenu === remove) { CustomMenu.open_contextmenu = null; }
@@ -82,8 +86,12 @@ function CustomMenu(e) {
 
   this.menu = function(menu,call) {
     remove = function(event) {
-      // a left mousedown in the menu selects the item (only there, not on things outside the menu)
-      if (event && event.button == 0 && $(event.target).closest(menu).length > 0) { $(event.target).trigger('click'); }
+      // a left mousedown in the menu selects the item (only there, not on things outside the menu).
+      // It is used up by the menu, so it does not close what the item opens (e.g. a dialogue).
+      if (event && event.button == 0 && $(event.target).closest(menu).length > 0) {
+        $(event.target).trigger('click');
+        event.stopPropagation();
+      }
       menu.hide();
       $('body', document).off('mousedown',remove);
       $("div.menuitem",$(menu)).each(function(ind,ele){
