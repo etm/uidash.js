@@ -1,6 +1,6 @@
 @font-face {
     font-family: "uidash-icons";
-    src: url("./uidash-icons.ttf?49aff948df055f7a9755cc0bd6c35595") format("truetype");
+    src: url("./uidash-icons.ttf?18de761c7e188e86597f7e69caede199") format("truetype");
 }
 
 i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
@@ -154,4 +154,10 @@ i[class^="uidash-icon-"]:before, i[class*=" uidash-icon-"]:before {
 }
 .uidash-icon-versioning:before {
     content: "\f12f";
+}
+.uidash-icon-hhandle:before {
+    content: "\f130";
+}
+.uidash-icon-vhandle:before {
+    content: "\f131";
 }

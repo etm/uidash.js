@@ -52,6 +52,8 @@ module.exports = {
 	  "shift": 61740,
 	  "subprocess": 61741,
 	  "morev": 61742,
-	  "versioning": 61743
+	  "versioning": 61743,
+	  "hhandle": 61744,
+	  "vhandle": 61745
   }
 };

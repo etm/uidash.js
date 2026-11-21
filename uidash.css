@@ -316,33 +316,47 @@ body {
 }
 
 *[is=x-ui-] ui-rest > ui-content > ui-resizehandle {
-  width: 0em;
-}
-*[is=x-ui-] ui-rest > ui-content > ui-resizehandle + ui-area > ui-tabbed {
-  margin-left: 1.5em;
-}
-*[is=x-ui-] ui-rest > ui-content > ui-resizehandle + ui-area > ui-rest > ui-tabbar > ui-before {
-  padding-left: 1.5em;
+  flex: 0 0 auto;
+  width: 1em;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, transparent calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% + 0.5pt), transparent calc(50% + 0.5pt));
+  cursor: ew-resize;
+  color: var(--x-ui-border-color);
 }
 
 *[is=x-ui-] ui-close {
   margin-left: 0.5em;
 }
 
+*[is=x-ui-] ui-rest > ui-content > ui-resizehandle::before, *[is=x-ui-] > ui-resizehandle::before, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-resizehandle::before {
+  font-family: uidash-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 *[is=x-ui-] ui-rest > ui-content > ui-resizehandle::before {
-  display: block;
+  content: "\f131";
   position: absolute;
-  color: var(--x-ui-border-color);
-  white-space:nowrap;
-  cursor: ew-resize;
-  -webkit-transform: rotate(90deg);
-  -webkit-transform-origin: 0% 0%;
-  -moz-transform: rotate(90deg);
-  -moz-transform-origin: left top;
-  margin-left: -0.1em;
-  content: attr(data-label);
-  background-color: color-mix(in srgb, var(--x-ui-background-color) 90%, transparent);
-  padding: 0.1em 0.2em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--x-ui-background-color);
+  padding: 0.2em 0;
+}
+*[is=x-ui-] > ui-resizehandle::before, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-resizehandle::before {
+  content: "\f130";
+  line-height: 0.25em;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: var(--x-ui-background-color);
+  padding: 0 0.2em;
 }
 
 *[is=x-ui-] ui-content > ui-area {
@@ -355,9 +369,8 @@ body {
   white-space:nowrap;
   z-index: 99999;
   cursor: ns-resize;
-  text-align: right;
-  margin-top: 0.2em;
-  margin-right: 0.5em;
+  position: relative;
+  height: 0;
 }
 
 *[is=x-ui-] ui-tabbed, ui-content, ui-area { display: block; }
