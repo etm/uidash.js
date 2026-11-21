@@ -317,12 +317,20 @@ body {
 
 *[is=x-ui-] ui-rest > ui-content > ui-resizehandle {
   flex: 0 0 auto;
-  width: 1em;
+  width: 0;
   position: relative;
-  z-index: 1;
-  background: linear-gradient(to right, transparent calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% + 0.5pt), transparent calc(50% + 0.5pt));
+  z-index: 99999;
   cursor: ew-resize;
   color: var(--x-ui-border-color);
+}
+*[is=x-ui-] ui-rest > ui-content > ui-resizehandle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.5em;
+  width: 1em;
+  background: linear-gradient(to right, transparent calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% + 0.5pt), transparent calc(50% + 0.5pt));
 }
 
 *[is=x-ui-] ui-close {
@@ -342,6 +350,7 @@ body {
 *[is=x-ui-] ui-rest > ui-content > ui-resizehandle::before {
   content: "\f131";
   position: absolute;
+  z-index: 1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -371,6 +380,9 @@ body {
   cursor: ns-resize;
   position: relative;
   height: 0;
+}
+*[is=x-ui-] > ui-tabbed.off + ui-resizehandle, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-tabbed.off + ui-resizehandle {
+  display: none;
 }
 
 *[is=x-ui-] ui-tabbed, ui-content, ui-area { display: block; }
