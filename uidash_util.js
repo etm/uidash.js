@@ -93,7 +93,7 @@ $.fn.get_val = function () {
   } else if ($(this).is('input') || $(this).is('select') || $(this).is('textarea')) {
     return $(this).val();
   } else {
-    var ret = $(this).html().replace(/<div>/g,'').replace(/<\/div>/g,'\n').replace(/<li><br><\/li>/g,'\n').replace(/<li>/g,'').replace(/<\/li>/g,'\n').replace(/<br\/?>/g,'\n').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,'\'').trim();
+    var ret = $(this).html().replace(/<div>/g,'').replace(/<\/div>/g,'\n').replace(/<li><br><\/li>/g,'\n').replace(/<li>/g,'').replace(/<\/li>/g,'\n').replace(/<br\/?>/g,'\n').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,'\'').trim();
     return ret;
   }
 };
