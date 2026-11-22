@@ -39,6 +39,10 @@ i.uidash-text:before {
   --x-ui-content-border-color: #ffed00;
   --x-ui-content-light-background: #f0f0f0;
   --x-ui-content-hover-background: #99cce660;
+  --x-ui-active-color: Highlight;
+  --x-ui-menu-active-back: Highlight;
+  --x-ui-menu-active-front: HighlightText;
+  --x-ui-invalid-color: #ff0000;
   --x-ui-tab-inactive-color: #f0f0f0;
   --x-ui-speech-me-back: #0d57ef;
   --x-ui-speech-me-front: #ffffff;
@@ -128,8 +132,16 @@ body {
 }
 
 *[is=x-ui-] input { font-family: adwaita-sans; font-size: 1em; }
-*[is=x-ui-] input::-webkit-input-placeholder { color: red; }
-*[is=x-ui-] input:-moz-placeholder { color: red; }
+*[is=x-ui-] input::placeholder, *[is=x-ui-] textarea::placeholder { color: var(--x-ui-border-color); }
+/* user-invalid, not invalid: empty required fields are not red before they were touched */
+*[is=x-ui-] input:focus:not(:user-invalid), *[is=x-ui-] textarea:focus:not(:user-invalid), *[is=x-ui-] select:focus:not(:user-invalid) {
+  border-color: var(--x-ui-active-color);
+  outline-color: var(--x-ui-active-color);
+}
+*[is=x-ui-] input:user-invalid, *[is=x-ui-] textarea:user-invalid, *[is=x-ui-] select:user-invalid {
+  border-color: var(--x-ui-invalid-color);
+  outline-color: var(--x-ui-invalid-color);
+}
 
 *[is=x-ui-] a:link    { color:var(--x-ui-link-color); text-decoration:none; }
 *[is=x-ui-] a:visited { color:var(--x-ui-link-color); text-decoration:none; }

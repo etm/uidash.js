@@ -62,8 +62,8 @@ tr.contextmenuitem, div.menu > div {
   line-height: 1.4em;
 }
 tr.contextmenuitem:hover, div.menu > div:hover {
-  background-color: var(--x-ui-content-hover-background);
-  color: var(--x-ui-light-text-color);
+  background-color: var(--x-ui-menu-active-back);
+  color: var(--x-ui-menu-active-front);
 }
 tr.contextmenuitem > td, div.menu > div {
   padding: 0;
