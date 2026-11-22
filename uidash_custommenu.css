@@ -24,7 +24,7 @@ div.contextmenu, div.menu {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
-  box-shadow: 0.1em 0.1em 0.1em var(--x-ui-border-color);
+  box-shadow: 0 0.125em 0.5em var(--x-ui-border-color);
   cursor: pointer;
   user-select: none;
 }
