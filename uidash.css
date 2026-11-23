@@ -341,8 +341,8 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -0.5em;
-  width: 1em;
+  left: -0.4em;
+  width: 0.8em;
   background: linear-gradient(to right, transparent calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% - 0.5pt), var(--x-ui-border-color) calc(50% + 0.5pt), transparent calc(50% + 0.5pt));
 }
 
@@ -393,6 +393,18 @@ body {
   cursor: ns-resize;
   position: relative;
   height: 0;
+}
+/* grab area over the whole width, like the one of the column handle */
+*[is=x-ui-] > ui-resizehandle::after, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-resizehandle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.3em;
+  height: 0.6em;
+}
+*[is=x-ui-] ui-resizehandle:hover::before {
+  color: var(--x-ui-active-color);
 }
 *[is=x-ui-] > ui-tabbed.off + ui-resizehandle, *[is=x-ui-] ui-rest > ui-content > ui-area > ui-tabbed.off + ui-resizehandle {
   display: none;
