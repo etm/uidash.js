@@ -115,8 +115,11 @@ $(window).on('resize', function() {
 });
 
 function uidash_dialogue_close(dlg) { // {{{
+  // tells the dialogue, by its button, the close button or a click outside
+  if (!$(dlg).hasClass('open')) { return; }
   $(dlg).removeClass('open').removeData('uidash-target');
   if (uidash_dialogue_observer) { uidash_dialogue_observer.unobserve($(dlg)[0]); }
+  $(dlg)[0].dispatchEvent(new CustomEvent("uidash:dialogue_close", {"bubbles":true, "cancelable":false}));
 } // }}}
 
 function uidash_dialogue(dlg, target) { // {{{
