@@ -60,6 +60,10 @@ ui-dialogue > ui-dialogue-content > :is(p, ul, ol, dl, pre, blockquote):last-chi
   margin-bottom: 0.5em;
 }
 
+*[is=x-ui-] ui-dialogue button {
+  padding: 0.2em 1em;
+}
+
 ui-dialogue.open > ui-close {
   position: absolute;
   top: 0.45em;
