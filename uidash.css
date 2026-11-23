@@ -401,6 +401,82 @@ body {
 *[is=x-ui-] ui-tabbed, ui-content, ui-area { display: block; }
 *[is=x-ui-] ui-content > ui-area.inactive, ui-content > ui-resizehandle.inactive, ui-rest > ui-content > ui-resizehandle.inactive { display: none!important; }
 
+/* tabs inside an area: content left, vertical tabbar right {{{ */
+*[is=x-ui-] ui-content > ui-area:has(> ui-tabbar) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 0;
+}
+*[is=x-ui-] ui-area > ui-tabbar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  background-color: var(--x-ui-outside-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*[is=x-ui-] ui-area > ui-tabbar > ui-before {
+  padding-top: 0.5em;
+  border-left: 1pt solid var(--x-ui-border-color);
+}
+*[is=x-ui-] ui-area > ui-tabbar > ui-tab {
+  writing-mode: vertical-rl;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5em 0.3em;
+  border: 1pt solid var(--x-ui-border-color);
+  border-left-color: var(--x-ui-background-color);
+  border-right: 0 none;
+  border-radius: 0;
+  background: var(--x-ui-background-color);
+}
+*[is=x-ui-] ui-area > ui-tabbar > ui-tab + ui-tab {
+  border-top: 0 none;
+}
+*[is=x-ui-] ui-area > ui-tabbar > ui-tab.inactive {
+  font-weight: normal;
+  background-color: var(--x-ui-tab-inactive-color);
+  border-left-color: var(--x-ui-border-color);
+  border-radius: 0;
+}
+*[is=x-ui-] ui-area > ui-tabbar > ui-behind {
+  flex: 1 1 auto;
+  border-left: 1pt solid var(--x-ui-border-color);
+}
+*[is=x-ui-] ui-area > ui-content {
+  flex: 1 1 0%;
+  overflow-x: auto;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+/* at the very left of the screen (no visible area or resizehandle before it)
+   the tabbar is on the left side */
+*[is=x-ui-] ui-rest > ui-content > ui-area:has(> ui-tabbar):not(:not(.inactive, .hidden) ~ *) {
+  flex-direction: row;
+}
+*[is=x-ui-] ui-rest > ui-content > ui-area:not(:not(.inactive, .hidden) ~ *) > ui-tabbar > ui-before,
+*[is=x-ui-] ui-rest > ui-content > ui-area:not(:not(.inactive, .hidden) ~ *) > ui-tabbar > ui-behind {
+  border-left: 0 none;
+  border-right: 1pt solid var(--x-ui-border-color);
+}
+*[is=x-ui-] ui-rest > ui-content > ui-area:not(:not(.inactive, .hidden) ~ *) > ui-tabbar > ui-tab {
+  border-left: 0 none;
+  border-right: 1pt solid var(--x-ui-background-color);
+}
+*[is=x-ui-] ui-rest > ui-content > ui-area:not(:not(.inactive, .hidden) ~ *) > ui-tabbar > ui-tab.inactive {
+  border-right-color: var(--x-ui-border-color);
+}
+/* }}} */
+
 *[is=x-ui-] ui-content > ui-area .x-ui-layout {
   width: 100%;
   border-collapse:collapse;
