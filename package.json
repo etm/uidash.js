@@ -1,6 +1,6 @@
 {
   "name": "uidashjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple UI lib used by the Cloud Process Execution Engine (cpee.org) and its friends.",
   "keywords": ["ui", "tabs", "dashboard", "jquery", "cpee"],
   "homepage": "https://github.com/etm/uidash.js",
